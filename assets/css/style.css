@@ -1,31 +1,3 @@
-/* ============================================================
-   RESET E VARIÁVEIS
-   Salão Kelson Azul Menongue - Rosa + Verde
-   ============================================================ */
-
-:root {
-    --cor-primaria: #d63384;
-    --cor-primaria-dark: #a02464;
-    --cor-secundaria: #f8d7e3;
-    --cor-whatsapp: #25D366;
-    --cor-whatsapp-dark: #128C7E;
-    --cor-texto: #2d3748;
-    --cor-texto-claro: #718096;
-    --cor-fundo: #ffffff;
-    --cor-fundo-alt: #fdf7fa;
-    --sombra-suave: 0 4px 20px rgba(214, 51, 132, 0.08);
-    --sombra-media: 0 8px 30px rgba(214, 51, 132, 0.12);
-    --sombra-forte: 0 15px 40px rgba(214, 51, 132, 0.2);
-    --radius: 16px;
-    --radius-sm: 8px;
-    --transicao: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-
-
-
-
-
 
 
 
@@ -114,6 +86,52 @@
     --transicao: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 } */
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ============================================================
+   RESET E VARIÁVEIS
+   ============================================================ */
+:root {
+    --cor-primaria: #d63384;
+    --cor-primaria-dark: #a02464;
+    --cor-secundaria: #f8d7e3;
+    --cor-whatsapp: #25D366;
+    --cor-whatsapp-dark: #128C7E;
+    --cor-texto: #2d3748;
+    --cor-texto-claro: #718096;
+    --cor-fundo: #ffffff;
+    --cor-fundo-alt: #fdf7fa;
+    --sombra-suave: 0 4px 20px rgba(214, 51, 132, 0.08);
+    --sombra-media: 0 8px 30px rgba(214, 51, 132, 0.12);
+    --sombra-forte: 0 15px 40px rgba(214, 51, 132, 0.2);
+    --radius: 16px;
+    --radius-sm: 8px;
+    --transicao: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 /* ========== RESET GLOBAL ========== */
 * {
     margin: 0;
@@ -181,7 +199,7 @@ video, iframe, embed, object {
 }
 
 /* ============================================================
-   HEADER
+   HEADER (sem backdrop-filter - compatível iPhone)
    ============================================================ */
 .mui-appbar {
     position: fixed;
@@ -192,7 +210,7 @@ video, iframe, embed, object {
     background: rgba(255, 255, 255, 0.98);
     padding: 10px 0;
     transition: var(--transicao);
-    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
 .mui-appbar--fixed {
@@ -201,11 +219,11 @@ video, iframe, embed, object {
 
 .header--scrolled {
     padding: 6px 0;
-    box-shadow: 0 4px 20px rgba(201, 162, 39, 0.15);
+    box-shadow: 0 4px 20px rgba(214, 51, 132, 0.1);
 }
 
 .logo {
-    height: 42px;
+    height: 38px;
     width: auto;
     max-width: 140px;
     object-fit: contain;
@@ -260,7 +278,7 @@ video, iframe, embed, object {
 }
 
 /* ============================================================
-   BOTÕES MUI
+   BOTÕES MUI — CORRIGIDOS
    ============================================================ */
 .mui-btn {
     display: inline-flex;
@@ -319,20 +337,18 @@ video, iframe, embed, object {
     }
 }
 
-/* Botão primário - Preto (para destaque profissional) */
 .mui-btn--primary {
-    background: var(--cor-preto);
+    background: var(--cor-primaria);
     color: white;
-    box-shadow: 0 4px 15px rgba(26, 26, 26, 0.25);
+    box-shadow: 0 4px 15px rgba(214, 51, 132, 0.3);
 }
 
 .mui-btn--primary:hover {
-    background: #000000;
+    background: var(--cor-primaria-dark);
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(26, 26, 26, 0.4);
+    box-shadow: 0 8px 25px rgba(214, 51, 132, 0.4);
 }
 
-/* Botão WhatsApp - Verde */
 .mui-btn--whatsapp {
     background: var(--cor-whatsapp);
     color: white;
@@ -345,28 +361,24 @@ video, iframe, embed, object {
     box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
 }
 
-/* Botão outlined - Dourado (para usar em fundo escuro) */
 .mui-btn--outlined {
     background: transparent;
-    color: var(--cor-primaria);
-    border: 2px solid var(--cor-primaria);
+    color: white;
+    border: 2px solid white;
 }
 
 .mui-btn--outlined:hover {
-    background: var(--cor-primaria);
-    color: var(--cor-preto);
-    transform: translateY(-2px);
+    background: white;
+    color: var(--cor-primaria);
 }
 
-/* Botão light - Branco (para usar em fundo escuro) */
 .mui-btn--light {
     background: white;
-    color: var(--cor-preto);
+    color: var(--cor-primaria);
 }
 
 .mui-btn--light:hover {
-    background: var(--cor-primaria);
-    color: var(--cor-preto);
+    background: var(--cor-secundaria);
     transform: translateY(-2px);
 }
 
@@ -410,11 +422,10 @@ video, iframe, embed, object {
     max-width: 100%;
 }
 
-/* Chip promocional - Dourado com texto preto */
 .mui-chip--promo {
-    background: linear-gradient(135deg, #E5B93D, #C9A227);
-    color: #1A1A1A;
-    box-shadow: 0 4px 15px rgba(201, 162, 39, 0.4);
+    background: linear-gradient(135deg, #ff6b9d, #d63384);
+    color: white;
+    box-shadow: 0 4px 15px rgba(214, 51, 132, 0.3);
     animation: pulse 2s infinite;
     font-size: 0.7rem;
     padding: 6px 12px;
@@ -425,14 +436,13 @@ video, iframe, embed, object {
     50% { transform: scale(1.04); }
 }
 
-/* Chip categoria - Creme com texto dourado escuro */
 .mui-chip--category {
     background: var(--cor-secundaria);
-    color: #8B6F1A;
+    color: var(--cor-primaria);
 }
 
 /* ============================================================
-   HERO SECTION
+   HERO SECTION (corrigida para iPhone)
    ============================================================ */
 .hero-section {
     position: relative;
@@ -457,14 +467,13 @@ video, iframe, embed, object {
     }
 }
 
-/* Overlay - Preto com dourado suave */
 .hero-overlay {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(26, 26, 26, 0.9), rgba(201, 162, 39, 0.55));
+    background: linear-gradient(135deg, rgba(214, 51, 132, 0.88), rgba(160, 36, 100, 0.78));
 }
 
 .hero-content {
@@ -481,7 +490,7 @@ video, iframe, embed, object {
     font-weight: 700;
     margin: 18px 0;
     line-height: 1.15;
-    text-shadow: 0 4px 20px rgba(0,0,0,0.4);
+    text-shadow: 0 4px 20px rgba(0,0,0,0.2);
     word-wrap: break-word;
     overflow-wrap: break-word;
 }
@@ -537,7 +546,7 @@ video, iframe, embed, object {
 
 .trust-item .material-icons {
     font-size: 1.1rem;
-    color: var(--cor-primaria);
+    color: #ffd700;
 }
 
 /* ============================================================
@@ -565,9 +574,8 @@ video, iframe, embed, object {
 .section--sobre    { background: var(--cor-fundo); }
 .section--localizacao { background: var(--cor-fundo-alt); }
 
-/* CTA Final - Preto com gradiente */
 .section--cta {
-    background: linear-gradient(135deg, #1A1A1A, #2D2D2D);
+    background: linear-gradient(135deg, var(--cor-primaria), var(--cor-primaria-dark));
     color: white;
 }
 
@@ -603,7 +611,7 @@ video, iframe, embed, object {
 }
 
 /* ============================================================
-   SERVIÇOS
+   SERVIÇOS (grid mobile first)
    ============================================================ */
 .services-grid {
     display: grid;
@@ -650,12 +658,11 @@ video, iframe, embed, object {
     border-color: var(--cor-primaria);
 }
 
-/* Ícone do serviço - Fundo creme/dourado */
 .service-icon {
     width: 62px;
     height: 62px;
     margin: 0 auto 16px;
-    background: linear-gradient(135deg, #F5F0E1, #E5B93D);
+    background: linear-gradient(135deg, var(--cor-secundaria), #ffd7e8);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -664,7 +671,7 @@ video, iframe, embed, object {
 
 .service-icon .material-icons {
     font-size: 1.8rem;
-    color: var(--cor-preto);
+    color: var(--cor-primaria);
 }
 
 .service-title {
@@ -681,19 +688,18 @@ video, iframe, embed, object {
     line-height: 1.5;
 }
 
-/* Preço - Fundo creme com texto dourado escuro */
 .service-price {
     display: inline-block;
     padding: 6px 14px;
     background: var(--cor-secundaria);
-    color: #8B6F1A;
+    color: var(--cor-primaria);
     border-radius: 50px;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 0.8rem;
 }
 
 /* ============================================================
-   GALERIA
+   GALERIA (grid mobile first)
    ============================================================ */
 .gallery-grid {
     display: grid;
@@ -829,7 +835,6 @@ video, iframe, embed, object {
     border-radius: var(--radius);
     box-shadow: var(--sombra-suave);
     width: 100%;
-    border-left: 4px solid var(--cor-primaria);
 }
 
 .info-icon {
@@ -851,7 +856,7 @@ video, iframe, embed, object {
 }
 
 .info-item a {
-    color: #8B6F1A;
+    color: var(--cor-primaria);
     font-weight: 600;
 }
 
@@ -881,14 +886,14 @@ video, iframe, embed, object {
 }
 
 /* ============================================================
-   CTA FINAL
+   CTA FINAL (sem backdrop-filter - compatível iPhone)
    ============================================================ */
 .cta-box {
     text-align: center;
     padding: 40px 20px;
-    background: rgba(201, 162, 39, 0.15);
+    background: rgba(255, 255, 255, 0.15);
     border-radius: var(--radius);
-    border: 2px solid rgba(201, 162, 39, 0.3);
+    border: 2px solid rgba(255, 255, 255, 0.25);
     width: 100%;
 }
 
@@ -903,25 +908,22 @@ video, iframe, embed, object {
     margin-bottom: 12px;
     line-height: 1.25;
     word-wrap: break-word;
-    color: white;
 }
 
 .cta-box p {
     font-size: clamp(0.9rem, 3vw, 1.1rem);
     margin-bottom: 25px;
     opacity: 0.95;
-    color: white;
 }
 
 /* ============================================================
    FOOTER
    ============================================================ */
 .footer {
-    background: #0F0F0F;
+    background: #1a1a2e;
     color: white;
     padding: 50px 0 20px;
     width: 100%;
-    border-top: 3px solid var(--cor-primaria);
 }
 
 .footer-grid {
@@ -944,10 +946,6 @@ video, iframe, embed, object {
     margin-bottom: 12px;
     color: white;
     font-size: 1.05rem;
-}
-
-.footer-col h3 {
-    color: var(--cor-primaria);
 }
 
 .footer-col p,
@@ -1049,7 +1047,7 @@ video, iframe, embed, object {
 .popup-overlay {
     position: fixed;
     inset: 0;
-    background: rgba(0,0,0,0.7);
+    background: rgba(0,0,0,0.6);
     z-index: 2000;
     display: flex;
     align-items: center;
@@ -1071,9 +1069,8 @@ video, iframe, embed, object {
     width: 100%;
     position: relative;
     text-align: center;
-    box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
     animation: slideUp 0.4s ease;
-    border-top: 4px solid var(--cor-primaria);
 }
 
 @media (max-width: 480px) {
@@ -1106,10 +1103,9 @@ video, iframe, embed, object {
 
 .popup-content h3 {
     font-size: 1.3rem;
-    color: #8B6F1A;
+    color: var(--cor-primaria);
     margin-bottom: 10px;
     line-height: 1.3;
-    font-weight: 700;
 }
 
 .popup-content p {
@@ -1123,7 +1119,7 @@ video, iframe, embed, object {
     padding: 13px 16px;
     border: 2px solid #e2e8f0;
     border-radius: var(--radius-sm);
-    font-size: 16px;
+    font-size: 16px; /* ⚠️ 16px evita zoom automático no iOS */
     font-family: inherit;
     margin-bottom: 14px;
     transition: var(--transicao);
@@ -1150,10 +1146,12 @@ video, iframe, embed, object {
    CORREÇÕES ESPECÍFICAS PARA iOS (iPhone/iPad)
    ============================================================ */
 @supports (-webkit-touch-callout: none) {
+    /* Safari iOS - suporte correto para 100vh */
     .hero-section {
         min-height: -webkit-fill-available;
     }
     
+    /* Evitar zoom automático em inputs */
     input[type="text"],
     input[type="tel"],
     input[type="email"],
@@ -1162,11 +1160,13 @@ video, iframe, embed, object {
         font-size: 16px !important;
     }
     
+    /* Remover efeitos que quebram no iOS */
     .mui-btn {
         -webkit-appearance: none;
         appearance: none;
     }
     
+    /* Melhorar rendering de texto */
     body {
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
@@ -1174,13 +1174,15 @@ video, iframe, embed, object {
         text-size-adjust: 100%;
     }
     
+    /* Prevenir bounce scroll horizontal */
     html, body {
         overflow-x: hidden;
         position: relative;
         width: 100%;
     }
     
+    /* Melhorar tap highlight */
     a, button {
-        -webkit-tap-highlight-color: rgba(201, 162, 39, 0.15);
+        -webkit-tap-highlight-color: rgba(214, 51, 132, 0.15);
     }
 }
