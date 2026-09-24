@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obrigado! - Salão de Beleza Kelson</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .obrigado-container {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(135deg, var(--cor-secundaria), white);
+        }
+        .obrigado-box {
+            max-width: 500px;
+            background: white;
+            padding: 50px 30px;
+            border-radius: var(--radius);
+            box-shadow: var(--sombra-media);
+        }
+        .obrigado-icon {
+            width: 90px;
+            height: 90px;
+            margin: 0 auto 20px;
+            background: var(--cor-whatsapp);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .obrigado-icon .material-icons {
+            font-size: 3rem;
+            color: white;
+        }
+        .obrigado-box h1 {
+            color: var(--cor-primaria);
+            margin-bottom: 15px;
+        }
+        .obrigado-box p {
+            color: var(--cor-texto-claro);
+            margin-bottom: 25px;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="obrigado-container">
+        <div class="obrigado-box">
+            <div class="obrigado-icon">
+                <span class="material-icons">check_circle</span>
+            </div>
+            <h1>Obrigado!</h1>
+            <p>
+                Recebemos o seu contacto. A nossa equipa irá responder-lhe em breve pelo WhatsApp.
+                <br><br>
+                Enquanto isso, não hesite em contactar-nos diretamente.
+            </p>
+            <a href="index.html" class="mui-btn mui-btn--primary mui-btn--large mui-btn--full">
+                <span class="material-icons">arrow_back</span>
+                Voltar ao Site
+            </a>
+        </div>
+    </div>
+</body>
+</html>

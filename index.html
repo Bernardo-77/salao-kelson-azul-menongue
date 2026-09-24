@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+    <meta name="description" content="Salão de Beleza Kelson - Cortes, Coloração, Manicure e Tratamentos. Agende já o seu horário pelo WhatsApp!">
+    <meta name="keywords" content="salão de beleza, cabeleireiro, manicure, estética, beleza, Angola">
+    <meta name="author" content="Salão de Beleza Kelson">
+    
+    <!-- Open Graph (para partilhas em redes sociais) -->
+    <meta property="og:title" content="Salão de Beleza Kelson - Transforme o seu Visual">
+    <meta property="og:description" content="Agende já o seu horário e ganhe 10% de desconto na primeira visita!">
+    <meta property="og:image" content="assets/img/hero-bg.jpg">
+    <meta property="og:type" content="website">
+
+    <title>Salão de Beleza Kelson | Agende o seu Horário</title>
+
+    <!-- Material UI (MUI) via CDN -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    <!-- CSS Customizado -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon/favicon.ico">
+</head>
+<body>
+
+    <!-- ========== HEADER ========== -->
+    <header class="mui-appbar mui-appbar--fixed" id="header">
+        <div class="mui-container mui-container--flex">
+            <div class="logo-container">
+                <img src="assets/img/logo.png" alt="Logótipo Salão de Beleza Kelson" class="logo" id="logo">
+            </div>
+            <nav class="nav-desktop">
+                <a href="#servicos" class="nav-link">Serviços</a>
+                <a href="#galeria" class="nav-link">Galeria</a>
+                <a href="#sobre" class="nav-link">Sobre</a>
+                <a href="#localizacao" class="nav-link">Localização</a>
+            </nav>
+            <button class="mui-btn mui-btn--primary mui-btn--whatsapp" id="btnWhatsappHeader">
+                <span class="material-icons">whatsapp</span>
+                Agendar
+            </button>
+        </div>
+    </header>
+
+    <!-- ========== HERO SECTION ========== -->
+    <section class="hero-section" id="hero">
+        <div class="hero-overlay"></div>
+        <div class="mui-container hero-content">
+            <span class="mui-chip mui-chip--promo">
+                <span class="material-icons">local_offer</span>
+                10% DESCONTO NA 1ª VISITA
+            </span>
+            <h1 class="hero-title">Transforme o seu Visual</h1>
+            <p class="hero-subtitle">
+                Ambiente acolhedor, profissionais experientes e os melhores produtos de beleza. 
+                Agende já o seu horário e sinta-se única.
+            </p>
+            <div class="hero-buttons">
+                <button class="mui-btn mui-btn--primary mui-btn--large" id="btnWhatsappHero">
+                    <span class="material-icons">whatsapp</span>
+                    Agendar pelo WhatsApp
+                </button>
+                <a href="#servicos" class="mui-btn mui-btn--outlined mui-btn--large">
+                    <span class="material-icons">content_cut</span>
+                    Ver Serviços
+                </a>
+            </div>
+            
+            <!-- Indicadores de Confiança -->
+            <div class="trust-indicators">
+                <div class="trust-item">
+                    <span class="material-icons">star</span>
+                    <span>+500 Clientes Satisfeitas</span>
+                </div>
+                <div class="trust-item">
+                    <span class="material-icons">schedule</span>
+                    <span>Resposta em 5 min</span>
+                </div>
+                <div class="trust-item">
+                    <span class="material-icons">verified</span>
+                    <span>Profissionais Certificados</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SERVIÇOS ========== -->
+    <section class="section section--servicos" id="servicos">
+        <div class="mui-container">
+            <div class="section-header">
+                <span class="mui-chip mui-chip--category">Os Nossos Serviços</span>
+                <h2 class="section-title">Cuidamos de Si com Excelência</h2>
+                <p class="section-subtitle">
+                    Oferecemos uma vasta gama de serviços de beleza com produtos de alta qualidade.
+                </p>
+            </div>
+
+            <div class="services-grid">
+                <!-- Serviço 1 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <span class="material-icons">content_cut</span>
+                    </div>
+                    <h3 class="service-title">Corte & Penteados</h3>
+                    <p class="service-description">
+                        Cortes modernos, clássicos e penteados para todas as ocasiões.
+                    </p>
+                    <span class="service-price">A partir de 3.500 Kz</span>
+                </div>
+
+                <!-- Serviço 2 -->
+                <div class="service-card">
+                    <div class="service-">
+                        <span class="material-icons">palette</span>
+                    </div>
+                    <h3 class="service-title">Coloração</h3>
+                    <p class="service-description">
+                        Coloração profissional, mechas, luzes e tratamentos de cor.
+                    </p>
+                    <span class="service-price">A partir de 8.000 Kz</span>
+                </div>
+
+                <!-- Serviço 3 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <span class="material-icons">spa</span>
+                    </div>
+                    <h3 class="service-title">Manicure & Pedicure</h3>
+                    <p class="service-description">
+                        Cuidados completos para as suas mãos e pés com produtos premium.
+                    </p>
+                    <span class="service-price">A partir de 2.500 Kz</span>
+                </div>
+
+                <!-- Serviço 4 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <span class="material-icons">face_retouching_natural</span>
+                    </div>
+                    <h3 class="service-title">Tratamentos Faciais</h3>
+                    <p class="service-description">
+                        Limpeza de pele, hidratação e tratamentos anti-idade.
+                    </p>
+                    <span class="service-price">A partir de 5.000 Kz</span>
+                </div>
+
+                <!-- Serviço 5 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <span class="material-icons">brush</span>
+                    </div>
+                    <h3 class="service-title">Maquilhagem</h3>
+                    <p class="service-description">
+                        Maquilhagem profissional para noivas, festas e eventos especiais.
+                    </p>
+                    <span class="service-price">A partir de 6.000 Kz</span>
+                </div>
+
+                <!-- Serviço 6 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <span class="material-icons">auto_awesome</span>
+                    </div>
+                    <h3 class="service-title">Tratamentos Capilares</h3>
+                    <p class="service-description">
+                        Hidratação profunda, reconstrução e alisamento.
+                    </p>
+                    <span class="service-price">A partir de 7.000 Kz</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== GALERIA ========== -->
+    <section class="section section--galeria" id="galeria">
+        <div class="mui-container">
+            <div class="section-header">
+                <span class="mui-chip mui-chip--category">Galeria</span>
+                <h2 class="section-title">Veja o Nosso Trabalho</h2>
+                <p class="section-subtitle">
+                    Fotos reais do nosso salão e dos trabalhos das nossas profissionais.
+                </p>
+            </div>
+
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="assets/img/galeria-1.jpg" alt="Trabalho de beleza 1" loading="lazy">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/img/galeria-2.jpg" alt="Trabalho de beleza 2" loading="lazy">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/img/galeria-3.jpg" alt="Trabalho de beleza 3" loading="lazy">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/img/galeria-4.jpg" alt="Trabalho de beleza 4" loading="lazy">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/img/galeria-5.jpg" alt="Trabalho de beleza 5" loading="lazy">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/img/galeria-6.jpg" alt="Trabalho de beleza 6" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SOBRE ========== -->
+    <section class="section section--sobre" id="sobre">
+        <div class="mui-container sobre-grid">
+            <div class="sobre-image">
+                <img src="assets/img/sobre.jpg" alt="Interior do salão" loading="lazy">
+            </div>
+            <div class="sobre-content">
+                <span class="mui-chip mui-chip--category">Sobre Nós</span>
+                <h2 class="section-title">Um Espaço Feito Para Si</h2>
+                <p class="sobre-text">
+                    O <strong>Salão de Beleza Kelson</strong> nasceu com o objetivo de oferecer 
+                    um serviço de excelência, combinando técnicas modernas com um atendimento 
+                    personalizado. Acreditamos que cada cliente é única e merece um cuidado especial.
+                </p>
+                <p class="sobre-text">
+                    A nossa equipa é formada por profissionais certificadas e em constante 
+                    atualização, garantindo que recebe sempre o melhor tratamento com os 
+                    produtos mais adequados ao seu tipo de cabelo e pele.
+                </p>
+                <div class="sobre-features">
+                    <div class="sobre-feature">
+                        <span class="material-icons">check_circle</span>
+                        <span>Ambiente climatizado</span>
+                    </div>
+                    <div class="sobre-feature">
+                        <span class="material-icons">check_circle</span>
+                        <span>Produtos premium</span>
+                    </div>
+                    <div class="sobre-feature">
+                        <span class="material-icons">check_circle</span>
+                        <span>Atendimento personalizado</span>
+                    </div>
+                    <div class="sobre-feature">
+                        <span class="material-icons">check_circle</span>
+                        <span>Estacionamento grátis</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== LOCALIZAÇÃO ========== -->
+    <section class="section section--localizacao" id="localizacao">
+        <div class="mui-container">
+            <div class="section-header">
+                <span class="mui-chip mui-chip--category">Localização</span>
+                <h2 class="section-title">Venha Visitar-nos</h2>
+                <p class="section-subtitle">
+                    Estamos localizados numa zona de fácil acesso. Venha conhecer-nos!
+                </p>
+            </div>
+
+            <div class="localizacao-grid">
+                <div class="localizacao-info">
+                    <div class="info-item">
+                        <span class="material-icons info-icon">location_on</span>
+                        <div>
+                            <h4>Endereço</h4>
+                            <p>Rua Principal, Bairro Central<br>Menongue, Cubango - Angola</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <span class="material-icons info-icon">schedule</span>
+                        <div>
+                            <h4>Horário de Funcionamento</h4>
+                            <p>Segunda a Sexta: 08h00 - 19h00<br>
+                               Sábado: 08h00 - 17h00<br>
+                               Domingo: Fechado</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <span class="material-icons info-icon">phone</span>
+                        <div>
+                            <h4>Contacto</h4>
+                            <p><a href="tel:+244923063962">+244 923 063 962</a></p>
+                        </div>
+                    </div>
+                    <button class="mui-btn mui-btn--primary mui-btn--large mui-btn--full" id="btnWhatsappLocalizacao">
+                        <span class="material-icons">whatsapp</span>
+                        Agendar pelo WhatsApp
+                    </button>
+                </div>
+                <div class="localizacao-mapa">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3839.991797632723!2d15.7!3d-14.6!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTTCsDM2JzAwLjAiUyAxNcKwNDInMDAuMCJF!5e0!3m2!1spt!2sao!4v1234567890" 
+                        width="100%" 
+                        height="450" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CTA FINAL ========== -->
+    <section class="section section--cta">
+        <div class="mui-container">
+            <div class="cta-box">
+                <h2>Pronta Para Transformar o Seu Visual?</h2>
+                <p>Agende já o seu horário e ganhe 10% de desconto na primeira visita.</p>
+                <button class="mui-btn mui-btn--light mui-btn--large" id="btnWhatsappCTA">
+                    <span class="material-icons">whatsapp</span>
+                    Agendar Agora
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="mui-container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Salão de Beleza Kelson</h3>
+                    <p>A sua beleza é a nossa paixão.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="#servicos">Serviços</a></li>
+                        <li><a href="#galeria">Galeria</a></li>
+                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a href="#localizacao">Localização</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contactos</h4>
+                    <p>📞 +244 923 063 962</p>
+                    <p>📍 Menongue, Cubango</p>
+                    <p>✉️ salaokelsonazulmenongue@gmail.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Salão de Beleza Kelson. Todos os direitos reservados.</p>
+                <a href="politica-privacidade.html">Política de Privacidade</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========== BOTÃO WHATSAPP FLUTUANTE ========== -->
+    <a href="#" class="whatsapp-float" id="btnWhatsappFloat" target="_blank" rel="noopener">
+        <span class="material-icons">whatsapp</span>
+    </a>
+
+    <!-- ========== POPUP DE CAPTURA (opcional) ========== -->
+    <div class="popup-overlay" id="popupOverlay" style="display: none;">
+        <div class="popup-content">
+            <button class="popup-close" id="popupClose">&times;</button>
+            <h3>Ganhe 10% de Desconto!</h3>
+            <p>Preencha o seu nome e contacte-nos diretamente pelo WhatsApp.</p>
+            <input type="text" id="popupNome" placeholder="O seu nome" class="mui-input">
+            <button class="mui-btn mui-btn--primary mui-btn--full" id="popupWhatsapp">
+                <span class="material-icons">whatsapp</span>
+                Quero o Desconto
+            </button>
+        </div>
+    </div>
+
+    <!-- ========== SCRIPTS ========== -->
+    <script src="assets/js/config.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
