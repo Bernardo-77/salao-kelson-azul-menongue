@@ -24,12 +24,15 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    max-width: 100%;
 }
 
 html {
     scroll-behavior: smooth;
-    overflow-x: hidden;       /* IMPEDE SCROLL LATERAL */
+    overflow-x: hidden;
     width: 100%;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
 }
 
 body {
@@ -37,9 +40,11 @@ body {
     color: var(--cor-texto);
     background: var(--cor-fundo);
     line-height: 1.6;
-    overflow-x: hidden;       /* IMPEDE SCROLL LATERAL */
+    overflow-x: hidden;
     width: 100%;
     position: relative;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 img {
@@ -53,14 +58,18 @@ a {
     text-decoration: none;
 }
 
+video, iframe, embed, object {
+    max-width: 100%;
+}
+
 /* ============================================================
-   CONTAINER MUI (com padding adaptativo)
+   CONTAINER MUI
    ============================================================ */
 .mui-container {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 16px;          /* Padding reduzido por omissão */
+    padding: 0 16px;
 }
 
 @media (min-width: 768px) {
@@ -77,7 +86,7 @@ a {
 }
 
 /* ============================================================
-   HEADER (mais compacto no mobile)
+   HEADER (sem backdrop-filter - compatível iPhone)
    ============================================================ */
 .mui-appbar {
     position: fixed;
@@ -85,9 +94,7 @@ a {
     left: 0;
     right: 0;
     z-index: 1000;
-    background: rgba(255, 255, 255, 0.97);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.98);
     padding: 10px 0;
     transition: var(--transicao);
     box-shadow: 0 2px 10px rgba(0,0,0,0.05);
@@ -110,7 +117,7 @@ a {
 }
 
 .nav-desktop {
-    display: none;             /* Escondido no mobile por omissão */
+    display: none;
 }
 
 @media (min-width: 900px) {
@@ -147,7 +154,6 @@ a {
     width: 100%;
 }
 
-/* Esconde o botão "Agendar" do header no mobile pequeno */
 #btnWhatsappHeader {
     display: none;
 }
@@ -158,23 +164,8 @@ a {
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
 /* ============================================================
-   BOTÕES MUI (adaptados para mobile)
-   ============================================================ */
-/* ============================================================
-   BOTÕES MUI — CORRIGIDOS (texto adaptável, sem transbordar)
+   BOTÕES MUI — CORRIGIDOS
    ============================================================ */
 .mui-btn {
     display: inline-flex;
@@ -193,16 +184,23 @@ a {
     letter-spacing: 0.5px;
     text-align: center;
     line-height: 1.25;
-    white-space: normal;      /* ✅ PERMITE QUEBRA DE LINHA */
-    word-wrap: break-word;    /* ✅ QUEBRA PALAVRAS LONGAS */
+    white-space: normal;
+    word-wrap: break-word;
     overflow-wrap: break-word;
-    overflow: hidden;         /* ✅ NADA SAI DO BOTÃO */
+    overflow: hidden;
     max-width: 100%;
     text-decoration: none;
     box-sizing: border-box;
+    -webkit-appearance: none;
+    appearance: none;
 }
 
-/* Em ecrãs pequenos: adapta paddings e tamanhos */
+.mui-btn .material-icons {
+    font-size: 1.15rem;
+    flex-shrink: 0;
+    line-height: 1;
+}
+
 @media (max-width: 600px) {
     .mui-btn {
         padding: 11px 16px;
@@ -215,7 +213,6 @@ a {
     }
 }
 
-
 @media (max-width: 400px) {
     .mui-btn {
         padding: 10px 14px;
@@ -225,7 +222,7 @@ a {
     .mui-btn .material-icons {
         font-size: 1rem;
     }
-} 
+}
 
 .mui-btn--primary {
     background: var(--cor-primaria);
@@ -273,54 +270,27 @@ a {
 }
 
 .mui-btn--large {
-    padding: 15px 30px;
+    padding: 15px 28px;
     font-size: 0.95rem;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
     .mui-btn--large {
-        padding: 13px 22px;
+        padding: 13px 20px;
         font-size: 0.85rem;
-        width: 100%;
+    }
+}
+
+@media (max-width: 400px) {
+    .mui-btn--large {
+        padding: 12px 16px;
+        font-size: 0.8rem;
     }
 }
 
 .mui-btn--full {
     width: 100%;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* ============================================================
    CHIPS MUI
@@ -336,6 +306,7 @@ a {
     text-transform: uppercase;
     letter-spacing: 0.8px;
     white-space: nowrap;
+    max-width: 100%;
 }
 
 .mui-chip--promo {
@@ -358,16 +329,18 @@ a {
 }
 
 /* ============================================================
-   HERO SECTION (adaptada para mobile)
+   HERO SECTION (corrigida para iPhone)
    ============================================================ */
 .hero-section {
     position: relative;
     min-height: 100vh;
-    min-height: 100svh;        /* melhor no mobile moderno */
+    min-height: -webkit-fill-available;
+    min-height: 100svh;
     display: flex;
     align-items: center;
     justify-content: center;
     background: url('../img/hero-bg.jpg') center/cover no-repeat;
+    background-attachment: scroll;
     padding: 100px 0 60px;
     text-align: center;
     overflow: hidden;
@@ -529,7 +502,7 @@ a {
    ============================================================ */
 .services-grid {
     display: grid;
-    grid-template-columns: 1fr;         /* 1 coluna no mobile */
+    grid-template-columns: 1fr;
     gap: 18px;
     width: 100%;
 }
@@ -800,16 +773,14 @@ a {
 }
 
 /* ============================================================
-   CTA FINAL
+   CTA FINAL (sem backdrop-filter - compatível iPhone)
    ============================================================ */
 .cta-box {
     text-align: center;
     padding: 40px 20px;
-    background: rgba(255,255,255,0.1);
+    background: rgba(255, 255, 255, 0.15);
     border-radius: var(--radius);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 2px solid rgba(255,255,255,0.2);
+    border: 2px solid rgba(255, 255, 255, 0.25);
     width: 100%;
 }
 
@@ -908,7 +879,7 @@ a {
 }
 
 /* ============================================================
-   BOTÃO WHATSAPP FLUTUANTE (mais pequeno no mobile)
+   BOTÃO WHATSAPP FLUTUANTE
    ============================================================ */
 .whatsapp-float {
     position: fixed;
@@ -1035,26 +1006,17 @@ a {
     padding: 13px 16px;
     border: 2px solid #e2e8f0;
     border-radius: var(--radius-sm);
-    font-size: 1rem;
+    font-size: 16px; /* ⚠️ 16px evita zoom automático no iOS */
     font-family: inherit;
     margin-bottom: 14px;
     transition: var(--transicao);
+    -webkit-appearance: none;
+    appearance: none;
 }
 
 .mui-input:focus {
     outline: none;
     border-color: var(--cor-primaria);
-}
-
-/* ============================================================
-   PREVENÇÃO DE OVERFLOW (IMPORTANTE!)
-   ============================================================ */
-* {
-    max-width: 100%;
-}
-
-video, iframe, embed, object {
-    max-width: 100%;
 }
 
 /* ============================================================
@@ -1064,5 +1026,50 @@ video, iframe, embed, object {
     *, *::before, *::after {
         animation-duration: 0.01ms !important;
         transition-duration: 0.01ms !important;
+    }
+}
+
+/* ============================================================
+   CORREÇÕES ESPECÍFICAS PARA iOS (iPhone/iPad)
+   ============================================================ */
+@supports (-webkit-touch-callout: none) {
+    /* Safari iOS - suporte correto para 100vh */
+    .hero-section {
+        min-height: -webkit-fill-available;
+    }
+    
+    /* Evitar zoom automático em inputs */
+    input[type="text"],
+    input[type="tel"],
+    input[type="email"],
+    textarea,
+    select {
+        font-size: 16px !important;
+    }
+    
+    /* Remover efeitos que quebram no iOS */
+    .mui-btn {
+        -webkit-appearance: none;
+        appearance: none;
+    }
+    
+    /* Melhorar rendering de texto */
+    body {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-text-size-adjust: 100%;
+        text-size-adjust: 100%;
+    }
+    
+    /* Prevenir bounce scroll horizontal */
+    html, body {
+        overflow-x: hidden;
+        position: relative;
+        width: 100%;
+    }
+    
+    /* Melhorar tap highlight */
+    a, button {
+        -webkit-tap-highlight-color: rgba(214, 51, 132, 0.15);
     }
 }
