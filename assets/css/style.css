@@ -1,8 +1,101 @@
 /* ============================================================
    RESET E VARIÁVEIS
+   Salão Kelson Azul Menongue - Rosa + Verde
+   ============================================================ */
+
+:root {
+    --cor-primaria: #d63384;
+    --cor-primaria-dark: #a02464;
+    --cor-secundaria: #f8d7e3;
+    --cor-whatsapp: #25D366;
+    --cor-whatsapp-dark: #128C7E;
+    --cor-texto: #2d3748;
+    --cor-texto-claro: #718096;
+    --cor-fundo: #ffffff;
+    --cor-fundo-alt: #fdf7fa;
+    --sombra-suave: 0 4px 20px rgba(214, 51, 132, 0.08);
+    --sombra-media: 0 8px 30px rgba(214, 51, 132, 0.12);
+    --sombra-forte: 0 15px 40px rgba(214, 51, 132, 0.2);
+    --radius: 16px;
+    --radius-sm: 8px;
+    --transicao: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+
+
+
+
+
+
+
+/* ============================================================
+   RESET E VARIÁVEIS
    Salão Kelson Azul Menongue - Paleta Preto + Dourado
    ============================================================ */
+
+
+
+
+/* 
 :root {
+    --cor-primaria: #C9A227;           
+    --cor-primaria-dark: #A88A1F;      
+    --cor-secundaria: #F5F0E1;      
+    --cor-whatsapp: #25D366;          
+    --cor-whatsapp-dark: #128C7E;      
+    --cor-texto: #1A1A1A;             
+    --cor-texto-claro: #6B6B6B;      
+    --cor-fundo: #FFFFFF;           
+    --cor-fundo-alt: #FAF7F0;        
+    --cor-preto: #1A1A1A;
+    --cor-preto-suave: #2D2D2D;
+    --sombra-suave: 0 4px 20px rgba(201, 162, 39, 0.08);
+    --sombra-media: 0 8px 30px rgba(201, 162, 39, 0.12);
+    --sombra-forte: 0 15px 40px rgba(201, 162, 39, 0.25);
+    --radius: 16px;
+    --radius-sm: 8px;
+    --transicao: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+} */
+
+
+
+
+
+   /* ============================================================
+   RESET E VARIÁVEIS
+   Salão Kelson Azul Menongue - 🥈 ALTERNATIVA — AZUL + PRATA
+   ============================================================ */
+
+/* 
+:root {
+    --cor-primaria: #1E3A5F;
+    --cor-primaria-dark: #152A45;
+    --cor-secundaria: #E8EDF2;
+    --cor-whatsapp: #25D366;
+    --cor-whatsapp-dark: #128C7E;
+    --cor-texto: #0F1E30;
+    --cor-texto-claro: #6B7B8F;
+    --cor-fundo: #FFFFFF;
+    --cor-fundo-alt: #F5F8FA;
+    --cor-preto: #0F1E30;
+    --sombra-suave: 0 4px 20px rgba(30, 58, 95, 0.08);
+    --sombra-media: 0 8px 30px rgba(30, 58, 95, 0.12);
+    --sombra-forte: 0 15px 40px rgba(30, 58, 95, 0.25);
+    --radius: 16px;
+    --radius-sm: 8px;
+    --transicao: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+} */
+
+
+
+
+   /* ============================================================
+   RESET E VARIÁVEIS
+   Salão Kelson Azul Menongue - ALTERNATIVA — PRETO + VERMELHO
+   ============================================================ */
+
+/* :root {
     --cor-primaria: #C8102E;
     --cor-primaria-dark: #A00D25;
     --cor-secundaria: #F0F0F0;
@@ -19,7 +112,7 @@
     --radius: 16px;
     --radius-sm: 8px;
     --transicao: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
+} */
 
 /* ========== RESET GLOBAL ========== */
 * {
