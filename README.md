@@ -1,53 +1,99 @@
-# 🌸 Landing Page - Salão de Beleza Kelson
+# 🌸 Sistema Salão de Beleza Kelson
 
-Landing page profissional e responsiva para salão de beleza, com foco em conversão via WhatsApp.
+Sistema completo de gestão de agendamentos e controle financeiro para o **Salão de Beleza Kelson** em Menongue, Angola.
 
-## 📋 Características
+---
 
-- ✅ Design moderno e responsivo (mobile-first)
-- ✅ Botões de WhatsApp em todos os pontos estratégicos
-- ✅ Popup de captura de leads
-- ✅ Galeria de fotos
-- ✅ Google Maps integrado
-- ✅ SEO otimizado (meta tags)
-- ✅ Open Graph para partilhas em redes sociais
-- ✅ Pronto para Google Analytics e Facebook Pixel
-- ✅ Política de Privacidade incluída (obrigatório para anúncios)
+## 📋 Índice
 
-## 🚀 Como Publicar (Deploy)
+- [Visão Geral](#visão-geral)
+- [Funcionalidades](#funcionalidades)
+- [Tecnologias](#tecnologias)
+- [Estrutura do Projeto](#estrutura-do-projeto)
+- [Instalação e Deploy](#instalação-e-deploy)
+- [Credenciais de Acesso](#credenciais-de-acesso)
+- [Como Usar](#como-usar)
+- [Documentação](#documentação)
+- [Suporte](#suporte)
 
-### Opção 1: Netlify (Recomendado - Gratuito)
+---
 
-1. Cria uma conta em [netlify.com](https://netlify.com)
-2. Faz download de toda a pasta `salao-beleza-landing`
-3. Arrasta a pasta para o painel do Netlify
-4. O site fica online em segundos com um URL tipo `https://nome-aleatorio.netlify.app`
-5. Podes configurar um domínio próprio nas configurações
+## 🎯 Visão Geral
 
-### Opção 2: Vercel (Gratuito)
+O sistema oferece **três interfaces integradas**:
 
-1. Cria uma conta em [vercel.com](https://vercel.com)
-2. Instala o Vercel CLI: `npm i -g vercel`
-3. Dentro da pasta do projeto, corre: `vercel`
-4. Segue as instruções no terminal
+| Interface | Utilizador | Função |
+|-----------|-----------|--------|
+| 🌐 **Landing Page** | Cliente final | Ver serviços, agendar online, pagar |
+| 👑 **Painel Admin** | Dono do salão | Gerir pedidos, funcionários, finanças |
+| 💼 **Painel Barbeiro** | Barbeiro | Ver e gerir os seus pedidos |
 
-### Opção 3: GitHub Pages (Gratuito)
+**URL em produção:** [https://salao-kelson.netlify.app/](https://salao-kelson.netlify.app/)
 
-1. Cria um repositório no GitHub
-2. Faz upload de todos os ficheiros
-3. Vai em Settings → Pages → Source: main branch
-4. O site fica online em `https://teu-utilizador.github.io/nome-repo`
+---
 
-## ⚙️ Como Personalizar
+## ✨ Funcionalidades
 
-### 1. Alterar Dados do Cliente
+### 🌐 Para o Cliente
+- ✅ Landing page responsiva e moderna
+- ✅ Ver serviços com preços
+- ✅ Galeria de trabalhos realizados
+- ✅ Informações de localização com mapa
+- ✅ **Agendamento online** com:
+  - Escolha de serviço
+  - Escolha de profissional (com foto)
+  - Escolha de data e hora (slots de 1 hora)
+  - Nome e telefone
+  - Forma de pagamento (Dinheiro / Multicai Express)
+  - Upload de comprovativo (Multicai)
+- ✅ Confirmação por WhatsApp automática
+- ✅ Sem sobreposição de horários
 
-Edita o ficheiro `assets/js/config.js`:
+### 👑 Para o Admin (Dono)
+- ✅ Login seguro por telefone (9 dígitos)
+- ✅ 4 cards de estatísticas:
+  - Hoje, Esta Semana, Este Mês, Este Ano
+  - Total de pedidos + Receita
+- ✅ **Gestão de Pedidos**:
+  - Ver todos os pedidos
+  - Filtrar por status
+  - Marcar como "Cliente Chegou" → recebe valor
+  - Marcar como "Não Compareceu"
+  - Ver comprovativo Multicai (modal)
+  - Sistema de taxa de atraso (10%)
+- ✅ **Gestão de Funcionários (CRUD)**:
+  - Adicionar novo funcionário
+  - Editar dados
+  - Desativar / Reativar
+  - Criar conta Firebase automaticamente
+- ✅ **Finanças**: receita total
+- ✅ **Relatórios PDF** (Hoje, Semana, Mês, Ano)
 
-```javascript
-const CLIENTE_CONFIG = {
-    nome: "Nome do Salão",
-    whatsapp: "244XXXXXXXXX",  // Sem + e sem espaços
-    whatsappMensagem: "Olá! Gostaria de agendar...",
-    // ... etc
-};
+### 💼 Para o Barbeiro
+- ✅ Login seguro por telefone
+- ✅ Ver apenas os seus pedidos
+- ✅ Filtros: Pendentes, Hoje, Semana, Todas
+- ✅ Estatísticas pessoais
+- ✅ Marcar "Cliente Chegou" → concluir pedido
+- ✅ Marcar "Não Compareceu"
+- ✅ Contactar cliente via WhatsApp
+
+---
+
+## 🛠 Tecnologias
+
+| Camada | Tecnologia |
+|--------|-----------|
+| **Frontend** | HTML5, CSS3, JavaScript (ES6+) |
+| **Backend / BaaS** | Firebase (Google) |
+| **Base de Dados** | Cloud Firestore |
+| **Autenticação** | Firebase Authentication |
+| **Design** | Material Icons + Design Custom |
+| **PDF** | jsPDF + AutoTable |
+| **Hospedagem** | Netlify (gratuito) |
+| **Repositório** | GitHub |
+| **Analytics** | Google Analytics 4 |
+
+---
+
+## 📁 Estrutura do Projeto
