@@ -1,15 +1,8 @@
-
-
-
 /* ============================================================
    RESET E VARIÁVEIS
-   Salão Kelson Azul Menongue - Paleta Preto + Dourado
+   Salão Kelson Menongue - Paleta PRETO + DOURADO
    ============================================================ */
 
-
-
-
-/* 
 :root {
     --cor-primaria: #C9A227;           
     --cor-primaria-dark: #A88A1F;      
@@ -28,108 +21,6 @@
     --radius: 16px;
     --radius-sm: 8px;
     --transicao: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-} */
-
-
-
-
-
-   /* ============================================================
-   RESET E VARIÁVEIS
-   Salão Kelson Azul Menongue - 🥈 ALTERNATIVA — AZUL + PRATA
-   ============================================================ */
-
-/* 
-:root {
-    --cor-primaria: #1E3A5F;
-    --cor-primaria-dark: #152A45;
-    --cor-secundaria: #E8EDF2;
-    --cor-whatsapp: #25D366;
-    --cor-whatsapp-dark: #128C7E;
-    --cor-texto: #0F1E30;
-    --cor-texto-claro: #6B7B8F;
-    --cor-fundo: #FFFFFF;
-    --cor-fundo-alt: #F5F8FA;
-    --cor-preto: #0F1E30;
-    --sombra-suave: 0 4px 20px rgba(30, 58, 95, 0.08);
-    --sombra-media: 0 8px 30px rgba(30, 58, 95, 0.12);
-    --sombra-forte: 0 15px 40px rgba(30, 58, 95, 0.25);
-    --radius: 16px;
-    --radius-sm: 8px;
-    --transicao: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-} */
-
-
-
-
-   /* ============================================================
-   RESET E VARIÁVEIS
-   Salão Kelson Azul Menongue - ALTERNATIVA — PRETO + VERMELHO
-   ============================================================ */
-
-/* :root {
-    --cor-primaria: #C8102E;
-    --cor-primaria-dark: #A00D25;
-    --cor-secundaria: #F0F0F0;
-    --cor-whatsapp: #25D366;
-    --cor-whatsapp-dark: #128C7E;
-    --cor-texto: #1A1A1A;
-    --cor-texto-claro: #6B6B6B;
-    --cor-fundo: #FFFFFF;
-    --cor-fundo-alt: #FAFAFA;
-    --cor-preto: #1A1A1A;
-    --sombra-suave: 0 4px 20px rgba(200, 16, 46, 0.08);
-    --sombra-media: 0 8px 30px rgba(200, 16, 46, 0.12);
-    --sombra-forte: 0 15px 40px rgba(200, 16, 46, 0.25);
-    --radius: 16px;
-    --radius-sm: 8px;
-    --transicao: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-} */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ============================================================
-   RESET E VARIÁVEIS
-   ============================================================ */
-:root {
-    --cor-primaria: #d63384;
-    --cor-primaria-dark: #a02464;
-    --cor-secundaria: #f8d7e3;
-    --cor-whatsapp: #25D366;
-    --cor-whatsapp-dark: #128C7E;
-    --cor-texto: #2d3748;
-    --cor-texto-claro: #718096;
-    --cor-fundo: #ffffff;
-    --cor-fundo-alt: #fdf7fa;
-    --sombra-suave: 0 4px 20px rgba(214, 51, 132, 0.08);
-    --sombra-media: 0 8px 30px rgba(214, 51, 132, 0.12);
-    --sombra-forte: 0 15px 40px rgba(214, 51, 132, 0.2);
-    --radius: 16px;
-    --radius-sm: 8px;
-    --transicao: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* ========== RESET GLOBAL ========== */
@@ -139,7 +30,6 @@
     box-sizing: border-box;
     max-width: 100%;
 }
-
 html {
     scroll-behavior: smooth;
     overflow-x: hidden;
@@ -219,7 +109,7 @@ video, iframe, embed, object {
 
 .header--scrolled {
     padding: 6px 0;
-    box-shadow: 0 4px 20px rgba(214, 51, 132, 0.1);
+    box-shadow: 0 4px 20px rgba(201, 162, 39, 0.15);
 }
 
 .logo {
@@ -340,7 +230,8 @@ video, iframe, embed, object {
 .mui-btn--primary {
     background: var(--cor-primaria);
     color: white;
-    box-shadow: 0 4px 15px rgba(214, 51, 132, 0.3);
+    box-shadow: 0 4px 15px rgba(201, 162, 39, 0.3);
+box-shadow: 0 8px 25px rgba(201, 162, 39, 0.4);
 }
 
 .mui-btn--primary:hover {
@@ -423,7 +314,7 @@ video, iframe, embed, object {
 }
 
 .mui-chip--promo {
-    background: linear-gradient(135deg, #ff6b9d, #d63384);
+    background: linear-gradient(135deg, #C9A227, #A88A1F);
     color: white;
     box-shadow: 0 4px 15px rgba(214, 51, 132, 0.3);
     animation: pulse 2s infinite;
@@ -473,8 +364,9 @@ video, iframe, embed, object {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(214, 51, 132, 0.88), rgba(160, 36, 100, 0.78));
+    background: linear-gradient(135deg, rgba(26, 26, 26, 0.88), rgba(45, 45, 45, 0.78));
 }
+
 
 .hero-content {
     position: relative;
@@ -662,7 +554,7 @@ video, iframe, embed, object {
     width: 62px;
     height: 62px;
     margin: 0 auto 16px;
-    background: linear-gradient(135deg, var(--cor-secundaria), #ffd7e8);
+    background: linear-gradient(135deg, var(--cor-secundaria), #e8d5a3);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -1731,4 +1623,92 @@ video, iframe, embed, object {
 
 .agendamento-resumo .mui-btn {
     margin-top: 14px;
+}
+
+
+
+
+
+
+
+
+/* ============================================================
+   AVISO DE ATRASO (10%)
+   ============================================================ */
+.agendamento-aviso {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 18px 20px;
+    background: linear-gradient(135deg, #fff5f5, #fed7d7);
+    border-left: 5px solid #e53e3e;
+    border-radius: 12px;
+    margin: 0 auto 28px;
+    max-width: 800px;
+    box-shadow: 0 4px 15px rgba(229, 62, 62, 0.15);
+    animation: avisoPulse 3s ease-in-out infinite;
+}
+
+@keyframes avisoPulse {
+    0%, 100% {
+        box-shadow: 0 4px 15px rgba(229, 62, 62, 0.15);
+    }
+    50% {
+        box-shadow: 0 6px 25px rgba(229, 62, 62, 0.25);
+    }
+}
+
+.agendamento-aviso .material-icons {
+    font-size: 2rem;
+    color: #e53e3e;
+    flex-shrink: 0;
+    margin-top: 2px;
+    animation: avisoIconPulse 2s ease-in-out infinite;
+}
+
+@keyframes avisoIconPulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+.agendamento-aviso strong {
+    display: block;
+    color: #c53030;
+    font-size: 0.95rem;
+    font-weight: 700;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.agendamento-aviso p {
+    color: #742a2a;
+    font-size: 0.88rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.agendamento-aviso b {
+    color: #c53030;
+    font-weight: 700;
+}
+
+@media (max-width: 480px) {
+    .agendamento-aviso {
+        padding: 14px 16px;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+
+    .agendamento-aviso .material-icons {
+        font-size: 1.6rem;
+    }
+
+    .agendamento-aviso strong {
+        font-size: 0.85rem;
+    }
+
+    .agendamento-aviso p {
+        font-size: 0.82rem;
+    }
 }

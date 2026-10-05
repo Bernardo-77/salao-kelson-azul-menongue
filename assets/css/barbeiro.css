@@ -1,6 +1,7 @@
 /* ============================================================
    PAINEL BARBEIRO
    Salão Kelson - Menongue
+   Paleta: Preto + Dourado
    ============================================================ */
 
 /* ========== FILTROS ========== */
@@ -37,13 +38,13 @@
 }
 
 .barbeiro-filtro:hover {
-    border-color: #d63384;
-    color: #d63384;
+    border-color: #C9A227;
+    color: #C9A227;
 }
 
 .barbeiro-filtro--active {
-    background: #d63384;
-    border-color: #d63384;
+    background: #C9A227;
+    border-color: #C9A227;
     color: white;
 }
 
@@ -65,7 +66,7 @@
 }
 
 .barbeiro-filtro:not(.barbeiro-filtro--active) .barbeiro-filtro__badge {
-    background: #d63384;
+    background: #C9A227;
     color: white;
 }
 
@@ -105,9 +106,9 @@
 }
 
 .barbeiro-pedido--hoje {
-    background: linear-gradient(135deg, #fff5f7 0%, #ffffff 100%);
+    background: linear-gradient(135deg, #FAF7F0 0%, #ffffff 100%);
     border-left-width: 6px;
-    box-shadow: 0 6px 20px rgba(214, 51, 132, 0.15);
+    box-shadow: 0 6px 20px rgba(201, 162, 39, 0.15);
 }
 
 /* ========== HEADER DO PEDIDO ========== */
@@ -129,7 +130,7 @@
 .barbeiro-pedido__hora-strong {
     font-size: 1.4rem;
     font-weight: 700;
-    color: #d63384;
+    color: #C9A227;
     line-height: 1;
 }
 
@@ -228,7 +229,7 @@
 }
 
 .barbeiro-pedido__valor {
-    color: #d63384 !important;
+    color: #C9A227 !important;
     font-weight: 700 !important;
     font-size: 1rem !important;
 }

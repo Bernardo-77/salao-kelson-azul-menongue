@@ -1,13 +1,14 @@
 /* ============================================================
    ADMIN DASHBOARD
    Salão Kelson - Menongue
+   Paleta: Preto + Dourado
    ============================================================ */
 
 .admin-body {
     background: #f5f7fa;
     min-height: 100vh;
     font-family: 'Roboto', -apple-system, BlinkMacSystemFont, sans-serif;
-    color: #2d3748;
+    color: #1A1A1A;
     margin: 0;
     padding: 0;
 }
@@ -29,13 +30,14 @@
 
 /* ========== HEADER ========== */
 .admin-header {
-    background: linear-gradient(135deg, #d63384, #a02464);
+    background: linear-gradient(135deg, #1A1A1A, #2D2D2D);
     color: white;
     padding: 14px 0;
-    box-shadow: 0 4px 20px rgba(214, 51, 132, 0.15);
+    box-shadow: 0 4px 20px rgba(201, 162, 39, 0.2);
     position: sticky;
     top: 0;
     z-index: 100;
+    border-bottom: 3px solid #C9A227;
 }
 
 .admin-header__inner {
@@ -66,6 +68,7 @@
     font-size: 1.15rem;
     font-weight: 700;
     margin: 0;
+    color: #C9A227;
 }
 
 .admin-header__text p {
@@ -115,25 +118,26 @@
 }
 
 .admin-btn--primary {
-    background: #d63384;
+    background: #C9A227;
     color: white;
-    box-shadow: 0 4px 12px rgba(214, 51, 132, 0.25);
+    box-shadow: 0 4px 12px rgba(201, 162, 39, 0.3);
 }
 
 .admin-btn--primary:hover {
-    background: #a02464;
+    background: #A88A1F;
     transform: translateY(-2px);
-    box-shadow: 0 6px 18px rgba(214, 51, 132, 0.35);
+    box-shadow: 0 6px 18px rgba(201, 162, 39, 0.4);
 }
 
 .admin-btn--ghost {
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.15);
     color: white;
-    backdrop-filter: blur(10px);
+    border: 1px solid rgba(201, 162, 39, 0.4);
 }
 
 .admin-btn--ghost:hover {
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(201, 162, 39, 0.2);
+    border-color: #C9A227;
 }
 
 .admin-btn--danger {
@@ -190,7 +194,7 @@
     gap: 14px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
     transition: all 0.3s ease;
-    border-left: 4px solid #d63384;
+    border-left: 4px solid #C9A227;
 }
 
 .stat-card:hover {
@@ -211,7 +215,7 @@
     width: 46px;
     height: 46px;
     border-radius: 12px;
-    background: linear-gradient(135deg, #f8d7e3, #fce4ec);
+    background: linear-gradient(135deg, #F5F0E1, #e8d5a3);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -219,7 +223,7 @@
 }
 
 .stat-card__icon .material-icons {
-    color: #d63384;
+    color: #C9A227;
     font-size: 1.5rem;
 }
 
@@ -233,7 +237,7 @@
     }
 }
 
-.stat-card--today { border-left-color: #d63384; }
+.stat-card--today { border-left-color: #C9A227; }
 .stat-card--week  { border-left-color: #3182ce; }
 .stat-card--month { border-left-color: #38a169; }
 .stat-card--year  { border-left-color: #dd6b20; }
@@ -264,14 +268,14 @@
 .stat-card__value {
     font-size: 1.6rem;
     font-weight: 700;
-    color: #2d3748;
+    color: #1A1A1A;
     margin: 0;
     line-height: 1.1;
 }
 
 .stat-card__sub {
     font-size: 0.75rem;
-    color: #d63384;
+    color: #C9A227;
     font-weight: 600;
     margin: 2px 0 0 0;
 }
@@ -325,13 +329,13 @@
 }
 
 .admin-tab:hover {
-    background: rgba(214, 51, 132, 0.05);
-    color: #d63384;
+    background: rgba(201, 162, 39, 0.05);
+    color: #C9A227;
 }
 
 .admin-tab--active {
-    color: #d63384;
-    border-bottom-color: #d63384;
+    color: #C9A227;
+    border-bottom-color: #C9A227;
     background: white;
 }
 
@@ -392,14 +396,14 @@
 
 .admin-report__icon {
     font-size: 3.5rem;
-    color: #d63384;
+    color: #C9A227;
     margin-bottom: 12px;
     display: block;
 }
 
 .admin-report h3 {
     font-size: 1.3rem;
-    color: #2d3748;
+    color: #1A1A1A;
     margin: 0 0 8px 0;
 }
 
@@ -428,8 +432,8 @@
     display: inline-block;
     width: 20px;
     height: 20px;
-    border: 3px solid rgba(214, 51, 132, 0.3);
-    border-top-color: #d63384;
+    border: 3px solid rgba(201, 162, 39, 0.3);
+    border-top-color: #C9A227;
     border-radius: 50%;
     animation: adminSpin 0.8s linear infinite;
 }
@@ -438,11 +442,6 @@
     to { transform: rotate(360deg); }
 }
 
-
-
-
-
-
 /* ========== PEDIDOS ========== */
 .admin-pedidos__header {
     margin-bottom: 20px;
@@ -450,7 +449,7 @@
 
 .admin-pedidos__header h3 {
     font-size: 1.2rem;
-    color: #2d3748;
+    color: #1A1A1A;
     margin: 0;
 }
 
@@ -468,7 +467,7 @@
 
 .pedido-card:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 12px rgba(201, 162, 39, 0.1);
 }
 
 .pedido-card__header {
@@ -483,7 +482,7 @@
 .pedido-card__header h4 {
     margin: 0;
     font-size: 1rem;
-    color: #2d3748;
+    color: #1A1A1A;
 }
 
 .pedido-card__phone {
@@ -511,7 +510,7 @@
     justify-content: space-between;
     gap: 12px;
     font-size: 0.9rem;
-    color: #2d3748;
+    color: #1A1A1A;
     flex-wrap: wrap;
 }
 
@@ -533,7 +532,7 @@
 .admin-funcionarios__header h3 {
     margin: 0;
     font-size: 1.2rem;
-    color: #2d3748;
+    color: #1A1A1A;
 }
 
 .admin-funcionarios__list {
@@ -554,14 +553,14 @@
 
 .funcionario-card:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 12px rgba(201, 162, 39, 0.1);
 }
 
 .funcionario-card__avatar {
     width: 52px;
     height: 52px;
     border-radius: 50%;
-    background: linear-gradient(135deg, #d63384, #a02464);
+    background: linear-gradient(135deg, #C9A227, #A88A1F);
     color: white;
     display: flex;
     align-items: center;
@@ -579,7 +578,7 @@
 .funcionario-card__info h4 {
     margin: 0 0 4px;
     font-size: 0.95rem;
-    color: #2d3748;
+    color: #1A1A1A;
 }
 
 .funcionario-card__info p {
@@ -589,7 +588,7 @@
 }
 
 .funcionario-card__role {
-    color: #d63384 !important;
+    color: #C9A227 !important;
     font-weight: 600;
 }
 
@@ -604,7 +603,7 @@
 }
 
 .funcionario-card__actions .admin-btn:hover {
-    background: #d63384;
+    background: #C9A227;
     color: white;
 }
 
@@ -614,17 +613,20 @@
 }
 
 .financas-card {
-    background: linear-gradient(135deg, #d63384, #a02464);
+    background: linear-gradient(135deg, #1A1A1A, #2D2D2D);
     color: white;
     border-radius: 16px;
     padding: 30px;
     text-align: center;
+    border: 2px solid #C9A227;
+    box-shadow: 0 8px 30px rgba(201, 162, 39, 0.25);
 }
 
 .financas-card .material-icons {
     font-size: 2.5rem;
     margin-bottom: 8px;
     opacity: 0.9;
+    color: #C9A227;
 }
 
 .financas-card h3 {
@@ -632,12 +634,14 @@
     font-size: 1rem;
     font-weight: 500;
     opacity: 0.95;
+    color: #C9A227;
 }
 
 .financas-card__value {
     font-size: 2.2rem;
     font-weight: 700;
     margin: 0 0 6px;
+    color: #C9A227;
 }
 
 .financas-card__sub {
@@ -688,10 +692,6 @@
     }
 }
 
-
-
-
-
 /* ========== COMPROVATIVO NO CARD ========== */
 .pedido-card__comprovativo {
     margin-top: 10px;
@@ -726,7 +726,7 @@
 }
 
 /* ============================================================
-   MODAL DE COMPROVATIVO — VERSÃO CORRIGIDA (SOBREPOSTO)
+   MODAL DE COMPROVATIVO
    ============================================================ */
 .comprovativo-overlay {
     position: fixed !important;
@@ -881,21 +881,11 @@
     }
 }
 
-/* ============================================================
-   GARANTIR QUE O MODAL FICA SOBREPOSTO A TUDO
-   ============================================================ */
 body > .comprovativo-overlay {
     position: fixed !important;
     inset: 0 !important;
     z-index: 999999 !important;
 }
-
-
-
-
-
-
-
 
 /* ============================================================
    MODAL DE FUNCIONÁRIO
@@ -933,15 +923,17 @@ body > .comprovativo-overlay {
     align-items: flex-start;
     gap: 12px;
     padding: 18px 20px;
-    background: linear-gradient(135deg, #d63384, #a02464);
+    background: linear-gradient(135deg, #1A1A1A, #2D2D2D);
     color: white;
     flex-shrink: 0;
+    border-bottom: 3px solid #C9A227;
 }
 
 .funcionario-modal__header h3 {
     font-size: 1.15rem;
     margin: 0 0 4px;
     font-weight: 700;
+    color: #C9A227;
 }
 
 .funcionario-modal__header p {
@@ -967,7 +959,7 @@ body > .comprovativo-overlay {
 }
 
 .funcionario-modal__close:hover {
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(201, 162, 39, 0.4);
     transform: rotate(90deg);
 }
 
@@ -992,12 +984,12 @@ body > .comprovativo-overlay {
     gap: 6px;
     font-size: 0.8rem;
     font-weight: 600;
-    color: #2d3748;
+    color: #1A1A1A;
 }
 
 .funcionario-modal__field label .material-icons {
     font-size: 1rem;
-    color: #d63384;
+    color: #C9A227;
 }
 
 .funcionario-modal__field input,
@@ -1008,7 +1000,7 @@ body > .comprovativo-overlay {
     border-radius: 10px;
     font-size: 16px;
     font-family: inherit;
-    color: #2d3748;
+    color: #1A1A1A;
     background: white;
     transition: all 0.3s ease;
     -webkit-appearance: none;
@@ -1016,7 +1008,7 @@ body > .comprovativo-overlay {
 }
 
 .funcionario-modal__field select {
-    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23d63384' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23C9A227' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
     background-repeat: no-repeat;
     background-position: right 12px center;
     background-size: 18px;
@@ -1026,8 +1018,8 @@ body > .comprovativo-overlay {
 .funcionario-modal__field input:focus,
 .funcionario-modal__field select:focus {
     outline: none;
-    border-color: #d63384;
-    box-shadow: 0 0 0 3px rgba(214, 51, 132, 0.1);
+    border-color: #C9A227;
+    box-shadow: 0 0 0 3px rgba(201, 162, 39, 0.15);
 }
 
 .funcionario-modal__hint {
@@ -1041,11 +1033,11 @@ body > .comprovativo-overlay {
     align-items: flex-start;
     gap: 10px;
     padding: 12px 14px;
-    background: #ebf8ff;
-    border-left: 4px solid #3182ce;
+    background: #FAF7F0;
+    border-left: 4px solid #C9A227;
     border-radius: 8px;
     font-size: 0.82rem;
-    color: #2c5282;
+    color: #4a3f1f;
     line-height: 1.5;
 }
 
@@ -1053,6 +1045,7 @@ body > .comprovativo-overlay {
     font-size: 1.15rem;
     flex-shrink: 0;
     margin-top: 1px;
+    color: #C9A227;
 }
 
 .funcionario-modal__info strong {
@@ -1124,7 +1117,7 @@ body > .comprovativo-overlay {
 }
 
 .funcionario-card__actions .admin-btn:hover {
-    background: #d63384;
+    background: #C9A227;
     color: white;
 }
 

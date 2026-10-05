@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
-    <meta name="description" content="Salão de Beleza Kelson - Cortes, Coloração, Manicure e Tratamentos. Agende já o seu horário pelo WhatsApp!">
-    <meta name="keywords" content="salão de beleza, cabeleireiro, manicure, estética, beleza, Angola">
+    <meta name="description" content="Salão de Beleza Kelson - Cortes e Barbas. Agende já o seu horário online!">
+    <meta name="keywords" content="salão, cabeleireiro, barbearia, corte de cabelo, barba, Angola, Menongue">
     <meta name="author" content="Salão de Beleza Kelson">
     
     <!-- Open Graph (para partilhas em redes sociais) -->
-    <meta property="og:title" content="Salão de Beleza Kelson - Transforme o seu Visual">
-    <meta property="og:description" content="Agende já o seu horário e ganhe 10% de desconto na primeira visita!">
+    <meta property="og:title" content="Salão Kelson - Agende o Seu Corte Online">
+    <meta property="og:description" content="Agende o seu corte ou barba online em menos de 1 minuto!">
     <meta property="og:image" content="assets/img/hero-bg.jpg">
     <meta property="og:type" content="website">
 
-    <title>Salão de Beleza Kelson | Agende o seu Horário</title>
+    <title>Salão Kelson | Agende o Seu Corte Online</title>
 
     <!-- Material UI (MUI) via CDN -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap">
@@ -31,7 +31,7 @@
     <header class="mui-appbar mui-appbar--fixed" id="header">
         <div class="mui-container mui-container--flex">
             <div class="logo-container">
-                <img src="assets/img/logo.png" alt="Logótipo Salão de Beleza Kelson" class="logo" id="logo">
+                <img src="assets/img/logo.png" alt="Logótipo Salão Kelson" class="logo" id="logo">
             </div>
             <nav class="nav-desktop">
                 <a href="#servicos" class="nav-link">Serviços</a>
@@ -40,28 +40,14 @@
                 <a href="#localizacao" class="nav-link">Localização</a>
             </nav>
 
-
-
-
-
-
-
-
-
-            <a href="login.html" class="nav-link nav-link--login" >
+            <a href="login.html" class="nav-link nav-link--login">
                 🔒 Área Restrita
             </a>
 
-
-
-
-
-
-
-            <button class="mui-btn mui-btn--primary mui-btn--whatsapp" id="btnWhatsappHeader">
-                <span class="material-icons">whatsapp</span>
+            <a href="#agendamento" class="mui-btn mui-btn--primary mui-btn--whatsapp" id="btnAgendarHeader">
+                <span class="material-icons">event</span>
                 Agendar
-            </button>
+            </a>
         </div>
     </header>
 
@@ -73,16 +59,16 @@
                 <span class="material-icons">local_offer</span>
                 10% DESCONTO NA 1ª VISITA
             </span>
-            <h1 class="hero-title">Transforme o seu Visual</h1>
+            <h1 class="hero-title">Transforme o Seu Visual</h1>
             <p class="hero-subtitle">
-                Ambiente acolhedor, profissionais experientes e os melhores produtos de beleza. 
-                Agende já o seu horário e sinta-se única.
+                Ambiente acolhedor, profissionais experientes e cortes impecáveis. 
+                Agende online em menos de 1 minuto.
             </p>
             <div class="hero-buttons">
-                <button class="mui-btn mui-btn--primary mui-btn--large" id="btnWhatsappHero">
-                    <span class="material-icons">whatsapp</span>
-                    Agendar pelo WhatsApp
-                </button>
+                <a href="#agendamento" class="mui-btn mui-btn--primary mui-btn--large" id="btnAgendarHero">
+                    <span class="material-icons">event_available</span>
+                    Agendar Online
+                </a>
                 <a href="#servicos" class="mui-btn mui-btn--outlined mui-btn--large">
                     <span class="material-icons">content_cut</span>
                     Ver Serviços
@@ -93,11 +79,11 @@
             <div class="trust-indicators">
                 <div class="trust-item">
                     <span class="material-icons">star</span>
-                    <span>+500 Clientes Satisfeitas</span>
+                    <span>+500 Clientes Satisfeitos</span>
                 </div>
                 <div class="trust-item">
                     <span class="material-icons">schedule</span>
-                    <span>Resposta em 5 min</span>
+                    <span>Agendamento em 1 minuto</span>
                 </div>
                 <div class="trust-item">
                     <span class="material-icons">verified</span>
@@ -112,83 +98,43 @@
         <div class="mui-container">
             <div class="section-header">
                 <span class="mui-chip mui-chip--category">Os Nossos Serviços</span>
-                <h2 class="section-title">Cuidamos de Si com Excelência</h2>
+                <h2 class="section-title">Corte e Barba com Excelência</h2>
                 <p class="section-subtitle">
-                    Oferecemos uma vasta gama de serviços de beleza com produtos de alta qualidade.
+                    Serviços especializados para o seu estilo.
                 </p>
             </div>
 
-            <div class="services-grid">
-                <!-- Serviço 1 -->
+            <div class="services-grid services-grid--two">
+                <!-- Serviço 1: Corte -->
                 <div class="service-card">
                     <div class="service-icon">
                         <span class="material-icons">content_cut</span>
                     </div>
-                    <h3 class="service-title">Corte & Penteados</h3>
+                    <h3 class="service-title">Corte de Cabelo</h3>
                     <p class="service-description">
-                        Cortes modernos, clássicos e penteados para todas as ocasiões.
+                        Cortes modernos e clássicos, feitos à medida do seu estilo.
                     </p>
-                    <span class="service-price">A partir de 3.500 Kz</span>
+                    <span class="service-price">1.000 Kz</span>
+                    <a href="#agendamento" class="service-cta">
+                        <span class="material-icons">event_available</span>
+                        Agendar Corte
+                    </a>
                 </div>
 
-                <!-- Serviço 2 -->
-                <div class="service-card">
-                    <div class="service-">
-                        <span class="material-icons">palette</span>
-                    </div>
-                    <h3 class="service-title">Coloração</h3>
-                    <p class="service-description">
-                        Coloração profissional, mechas, luzes e tratamentos de cor.
-                    </p>
-                    <span class="service-price">A partir de 8.000 Kz</span>
-                </div>
-
-                <!-- Serviço 3 -->
-                <div class="service-card">
-                    <div class="service-icon">
-                        <span class="material-icons">spa</span>
-                    </div>
-                    <h3 class="service-title">Manicure & Pedicure</h3>
-                    <p class="service-description">
-                        Cuidados completos para as suas mãos e pés com produtos premium.
-                    </p>
-                    <span class="service-price">A partir de 2.500 Kz</span>
-                </div>
-
-                <!-- Serviço 4 -->
+                <!-- Serviço 2: Barba -->
                 <div class="service-card">
                     <div class="service-icon">
                         <span class="material-icons">face_retouching_natural</span>
                     </div>
-                    <h3 class="service-title">Tratamentos Faciais</h3>
+                    <h3 class="service-title">Barba</h3>
                     <p class="service-description">
-                        Limpeza de pele, hidratação e tratamentos anti-idade.
+                        Barba bem aparada com técnica profissional e navalha.
                     </p>
-                    <span class="service-price">A partir de 5.000 Kz</span>
-                </div>
-
-                <!-- Serviço 5 -->
-                <div class="service-card">
-                    <div class="service-icon">
-                        <span class="material-icons">brush</span>
-                    </div>
-                    <h3 class="service-title">Maquilhagem</h3>
-                    <p class="service-description">
-                        Maquilhagem profissional para noivas, festas e eventos especiais.
-                    </p>
-                    <span class="service-price">A partir de 6.000 Kz</span>
-                </div>
-
-                <!-- Serviço 6 -->
-                <div class="service-card">
-                    <div class="service-icon">
-                        <span class="material-icons">auto_awesome</span>
-                    </div>
-                    <h3 class="service-title">Tratamentos Capilares</h3>
-                    <p class="service-description">
-                        Hidratação profunda, reconstrução e alisamento.
-                    </p>
-                    <span class="service-price">A partir de 7.000 Kz</span>
+                    <span class="service-price">1.000 Kz</span>
+                    <a href="#agendamento" class="service-cta">
+                        <span class="material-icons">event_available</span>
+                        Agendar Barba
+                    </a>
                 </div>
             </div>
         </div>
@@ -201,28 +147,28 @@
                 <span class="mui-chip mui-chip--category">Galeria</span>
                 <h2 class="section-title">Veja o Nosso Trabalho</h2>
                 <p class="section-subtitle">
-                    Fotos reais do nosso salão e dos trabalhos das nossas profissionais.
+                    Fotos reais dos nossos cortes e trabalhos.
                 </p>
             </div>
 
             <div class="gallery-grid">
                 <div class="gallery-item">
-                    <img src="assets/img/galeria-1.jpg" alt="Trabalho de beleza 1" loading="lazy">
+                    <img src="assets/img/galeria-1.jpg" alt="Corte 1" loading="lazy">
                 </div>
                 <div class="gallery-item">
-                    <img src="assets/img/galeria-2.jpg" alt="Trabalho de beleza 2" loading="lazy">
+                    <img src="assets/img/galeria-2.jpg" alt="Corte 2" loading="lazy">
                 </div>
                 <div class="gallery-item">
-                    <img src="assets/img/galeria-3.jpg" alt="Trabalho de beleza 3" loading="lazy">
+                    <img src="assets/img/galeria-3.jpg" alt="Corte 3" loading="lazy">
                 </div>
                 <div class="gallery-item">
-                    <img src="assets/img/galeria-4.jpg" alt="Trabalho de beleza 4" loading="lazy">
+                    <img src="assets/img/galeria-4.jpg" alt="Corte 4" loading="lazy">
                 </div>
                 <div class="gallery-item">
-                    <img src="assets/img/galeria-5.jpg" alt="Trabalho de beleza 5" loading="lazy">
+                    <img src="assets/img/galeria-5.jpg" alt="Corte 5" loading="lazy">
                 </div>
                 <div class="gallery-item">
-                    <img src="assets/img/galeria-6.jpg" alt="Trabalho de beleza 6" loading="lazy">
+                    <img src="assets/img/galeria-6.jpg" alt="Corte 6" loading="lazy">
                 </div>
             </div>
         </div>
@@ -238,27 +184,22 @@
                 <span class="mui-chip mui-chip--category">Sobre Nós</span>
                 <h2 class="section-title">Um Espaço Feito Para Si</h2>
                 <p class="sobre-text">
-                    O <strong>Salão de Beleza Kelson</strong> nasceu com o objetivo de oferecer 
-                    um serviço de excelência, combinando técnicas modernas com um atendimento 
-                    personalizado. Acreditamos que cada cliente é única e merece um cuidado especial.
+                    O <strong>Salão Kelson</strong> nasceu com o objetivo de oferecer 
+                    um serviço de excelência no mundo dos cortes e barbas. Combinamos 
+                    técnicas modernas com um atendimento personalizado.
                 </p>
                 <p class="sobre-text">
-                    A nossa equipa é formada por profissionais certificadas e em constante 
-                    atualização, garantindo que recebe sempre o melhor tratamento com os 
-                    produtos mais adequados ao seu tipo de cabelo e pele.
+                    A nossa equipa é formada por profissionais experientes e em constante 
+                    atualização, garantindo sempre o melhor resultado para o seu visual.
                 </p>
                 <div class="sobre-features">
-                    <div class="sobre-feature">
-                        <span class="material-icons">check_circle</span>
-                        <span>Ambiente climatizado</span>
-                    </div>
                     <div class="sobre-feature">
                         <span class="material-icons">check_circle</span>
                         <span>Produtos premium</span>
                     </div>
                     <div class="sobre-feature">
                         <span class="material-icons">check_circle</span>
-                        <span>Atendimento personalizado</span>
+                        <span>Agendamento online</span>
                     </div>
                     <div class="sobre-feature">
                         <span class="material-icons">check_circle</span>
@@ -276,7 +217,7 @@
                 <span class="mui-chip mui-chip--category">Localização</span>
                 <h2 class="section-title">Venha Visitar-nos</h2>
                 <p class="section-subtitle">
-                    Estamos localizados numa zona de fácil acesso. Venha conhecer-nos!
+                    Estamos localizados numa zona de fácil acesso.
                 </p>
             </div>
 
@@ -305,10 +246,10 @@
                             <p><a href="tel:+244923063962">+244 923 063 962</a></p>
                         </div>
                     </div>
-                    <button class="mui-btn mui-btn--primary mui-btn--large mui-btn--full" id="btnWhatsappLocalizacao">
-                        <span class="material-icons">whatsapp</span>
-                        Agendar pelo WhatsApp
-                    </button>
+                    <a href="#agendamento" class="mui-btn mui-btn--primary mui-btn--large mui-btn--full" id="btnAgendarLocalizacao">
+                        <span class="material-icons">event_available</span>
+                        Agendar Online
+                    </a>
                 </div>
                 <div class="localizacao-mapa">
                     <iframe 
@@ -325,248 +266,254 @@
         </div>
     </section>
 
-
-    
-
-
-
+    <!-- ========== AGENDAMENTO ONLINE ========== -->
+    <section class="section section--agendamento" id="agendamento">
+        <div class="mui-container">
 
 
+            <div class="section-header">
+                <span class="mui-chip mui-chip--category">Agendamento Online</span>
+                <h2 class="section-title">Marque o Seu Horário</h2>
+                <p class="section-subtitle">
+                    Escolha o serviço, o profissional e o melhor horário para si.
+                </p>
+            </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-        <!-- ========== AGENDAMENTO ONLINE ========== -->
-        <section class="section section--agendamento" id="agendamento">
-            <div class="mui-container">
-                <div class="section-header">
-                    <span class="mui-chip mui-chip--category">Agendamento Online</span>
-                    <h2 class="section-title">Marque o Seu Horário</h2>
-                    <p class="section-subtitle">
-                        Escolha o serviço, o profissional e o melhor horário para si.
+            <!-- 🔥 AVISO DE TAXA POR ATRASO -->
+            <div class="agendamento-aviso">
+                <span class="material-icons">warning_amber</span>
+                <div>
+                    <strong>⚠️ Aviso importante sobre atrasos</strong>
+                    <p>
+                        Se o cliente chegar <b>mais de 15 minutos atrasado</b> ao horário agendado,
+                        será aplicada uma <b>taxa de 10%</b> sobre o valor do serviço.
+                        Agradecemos a pontualidade!
                     </p>
                 </div>
+            </div>
 
-                <div class="agendamento-wrapper">
-                    <form id="agendamentoForm" class="agendamento-form" novalidate>
 
-                        <!-- PASSO 1: SERVIÇO -->
-                        <div class="agendamento-step">
-                            <div class="agendamento-step__header">
-                                <span class="agendamento-step__number">1</span>
-                                <h3>Escolha o serviço</h3>
-                            </div>
-                            <div class="agendamento-services" id="agendamentoServices">
-                                <!-- Preenchido via JS -->
-                                <div class="agendamento-loading">A carregar serviços...</div>
-                            </div>
-                            <input type="hidden" id="selectedServico" required>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <div class="agendamento-wrapper">
+                <form id="agendamentoForm" class="agendamento-form" novalidate>
+
+                    <!-- PASSO 1: SERVIÇO -->
+                    <div class="agendamento-step">
+                        <div class="agendamento-step__header">
+                            <span class="agendamento-step__number">1</span>
+                            <h3>Escolha o serviço</h3>
                         </div>
-
-                        <!-- PASSO 2: BARBEIRO -->
-                        <div class="agendamento-step">
-                            <div class="agendamento-step__header">
-                                <span class="agendamento-step__number">2</span>
-                                <h3>Escolha o profissional</h3>
-                            </div>
-                            <div class="agendamento-barbeiros" id="agendamentoBarbeiros">
-                                <!-- Preenchido via JS -->
-                                <div class="agendamento-loading">A carregar profissionais...</div>
-                            </div>
-                            <input type="hidden" id="selectedBarbeiro" required>
+                        <div class="agendamento-services" id="agendamentoServices">
+                            <div class="agendamento-loading">A carregar serviços...</div>
                         </div>
+                        <input type="hidden" id="selectedServico" required>
+                    </div>
 
-                        <!-- PASSO 3: DATA E HORA -->
-                        <div class="agendamento-step">
-                            <div class="agendamento-step__header">
-                                <span class="agendamento-step__number">3</span>
-                                <h3>Escolha a data e hora</h3>
-                            </div>
-                            <div class="agendamento-datetime">
-                                <div class="agendamento-field">
-                                    <label for="agendamentoData">
-                                        <span class="material-icons">calendar_today</span>
-                                        Data
-                                    </label>
-                                    <input 
-                                        type="date" 
-                                        id="agendamentoData" 
-                                        name="data"
-                                        required
-                                    >
-                                </div>
-                                <div class="agendamento-field">
-                                    <label for="agendamentoHora">
-                                        <span class="material-icons">schedule</span>
-                                        Hora
-                                    </label>
-                                    <select id="agendamentoHora" name="hora" required disabled>
-                                        <option value="">Escolha primeiro a data</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="agendamento-info" id="agendamentoInfoHora" style="display: none;"></div>
+                    <!-- PASSO 2: BARBEIRO -->
+                    <div class="agendamento-step">
+                        <div class="agendamento-step__header">
+                            <span class="agendamento-step__number">2</span>
+                            <h3>Escolha o profissional</h3>
                         </div>
-
-                        <!-- PASSO 4: DADOS DO CLIENTE -->
-                        <div class="agendamento-step">
-                            <div class="agendamento-step__header">
-                                <span class="agendamento-step__number">4</span>
-                                <h3>Os seus dados</h3>
-                            </div>
-                            <div class="agendamento-dados">
-                                <div class="agendamento-field">
-                                    <label for="agendamentoNome">
-                                        <span class="material-icons">person</span>
-                                        Nome completo
-                                    </label>
-                                    <input 
-                                        type="text" 
-                                        id="agendamentoNome" 
-                                        name="nome"
-                                        placeholder="Ex: João Silva"
-                                        autocomplete="name"
-                                        required
-                                    >
-                                    <span class="agendamento-hint">Apenas letras e espaços</span>
-                                </div>
-                                <div class="agendamento-field">
-                                    <label for="agendamentoTelefone">
-                                        <span class="material-icons">phone</span>
-                                        Telefone (WhatsApp)
-                                    </label>
-                                    <input 
-                                        type="tel" 
-                                        id="agendamentoTelefone" 
-                                        name="telefone"
-                                        placeholder="9XX XXX XXX"
-                                        maxlength="9"
-                                        inputmode="numeric"
-                                        autocomplete="tel"
-                                        required
-                                    >
-                                    <span class="agendamento-hint">9 dígitos, começa com 9</span>
-                                </div>
-                            </div>
+                        <div class="agendamento-barbeiros" id="agendamentoBarbeiros">
+                            <div class="agendamento-loading">A carregar profissionais...</div>
                         </div>
+                        <input type="hidden" id="selectedBarbeiro" required>
+                    </div>
 
-                        <!-- PASSO 5: PAGAMENTO -->
-                        <div class="agendamento-step">
-                            <div class="agendamento-step__header">
-                                <span class="agendamento-step__number">5</span>
-                                <h3>Forma de pagamento</h3>
-                            </div>
-                            <div class="agendamento-pagamento">
-                                <label class="agendamento-pagamento__option">
-                                    <input type="radio" name="pagamento" value="cash" required>
-                                    <div class="agendamento-pagamento__card">
-                                        <span class="material-icons">payments</span>
-                                        <strong>Dinheiro</strong>
-                                        <small>Paga no local</small>
-                                    </div>
-                                </label>
-                                <label class="agendamento-pagamento__option">
-                                    <input type="radio" name="pagamento" value="express" required>
-                                    <div class="agendamento-pagamento__card">
-                                        <span class="material-icons">phone_iphone</span>
-                                        <strong>Multicai Express</strong>
-                                        <small>Anexa comprovativo</small>
-                                    </div>
-                                </label>
-                            </div>
-
-                            <!-- Upload de comprovativo (só aparece se express) -->
-                            <div class="agendamento-comprovativo" id="agendamentoComprovativo" style="display: none;">
-                                <label for="agendamentoComprovativoInput">
-                                    <span class="material-icons">upload_file</span>
-                                    Anexar comprovativo (foto ou PDF)
+                    <!-- PASSO 3: DATA E HORA -->
+                    <div class="agendamento-step">
+                        <div class="agendamento-step__header">
+                            <span class="agendamento-step__number">3</span>
+                            <h3>Escolha a data e hora</h3>
+                        </div>
+                        <div class="agendamento-datetime">
+                            <div class="agendamento-field">
+                                <label for="agendamentoData">
+                                    <span class="material-icons">calendar_today</span>
+                                    Data
                                 </label>
                                 <input 
-                                    type="file" 
-                                    id="agendamentoComprovativoInput"
-                                    accept="image/*,application/pdf"
+                                    type="date" 
+                                    id="agendamentoData" 
+                                    name="data"
+                                    required
                                 >
-                                <div class="agendamento-file-preview" id="agendamentoFilePreview"></div>
+                            </div>
+                            <div class="agendamento-field">
+                                <label for="agendamentoHora">
+                                    <span class="material-icons">schedule</span>
+                                    Hora
+                                </label>
+                                <select id="agendamentoHora" name="hora" required disabled>
+                                    <option value="">Escolha primeiro a data</option>
+                                </select>
                             </div>
                         </div>
-
-                        <!-- ERROS -->
-                        <div class="agendamento-error" id="agendamentoError" style="display: none;">
-                            <span class="material-icons">error_outline</span>
-                            <span id="agendamentoErrorText"></span>
-                        </div>
-
-                        <!-- SUCESSO (placeholder) -->
-                        <div class="agendamento-success" id="agendamentoSuccess" style="display: none;">
-                            <span class="material-icons">check_circle</span>
-                            <h3>Agendamento Confirmado!</h3>
-                            <p id="agendamentoSuccessText"></p>
-                        </div>
-
-                        <!-- BOTÃO -->
-                        <button type="submit" class="mui-btn mui-btn--primary mui-btn--large mui-btn--full" id="agendamentoSubmit">
-                            <span class="material-icons">event_available</span>
-                            <span id="agendamentoSubmitText">Confirmar Agendamento</span>
-                        </button>
-
-                        <p class="agendamento-note">
-                            <span class="material-icons">info</span>
-                            Após confirmar, receberá uma mensagem de confirmação no WhatsApp.
-                        </p>
-                    </form>
-
-                    <!-- RESUMO LATERAL (opcional, escondido em mobile) -->
-                    <div class="agendamento-resumo" id="agendamentoResumo" style="display: none;">
-                        <h4>Resumo</h4>
-                        <div class="agendamento-resumo__linha">
-                            <span>Serviço:</span>
-                            <strong id="resumoServico">—</strong>
-                        </div>
-                        <div class="agendamento-resumo__linha">
-                            <span>Barbeiro:</span>
-                            <strong id="resumoBarbeiro">—</strong>
-                        </div>
-                        <div class="agendamento-resumo__linha">
-                            <span>Data:</span>
-                            <strong id="resumoData">—</strong>
-                        </div>
-                        <div class="agendamento-resumo__linha">
-                            <span>Hora:</span>
-                            <strong id="resumoHora">—</strong>
-                        </div>
-                        <div class="agendamento-resumo__linha agendamento-resumo__linha--total">
-                            <span>Total:</span>
-                            <strong id="resumoTotal">1.000 Kz</strong>
-                        </div>
-                        <button type="button" class="mui-btn mui-btn--whatsapp mui-btn--full" id="agendamentoWhatsapp" style="display: none;">
-                            <span class="material-icons">whatsapp</span>
-                            Abrir WhatsApp
-                        </button>
+                        <div class="agendamento-info" id="agendamentoInfoHora" style="display: none;"></div>
                     </div>
+
+                    <!-- PASSO 4: DADOS DO CLIENTE -->
+                    <div class="agendamento-step">
+                        <div class="agendamento-step__header">
+                            <span class="agendamento-step__number">4</span>
+                            <h3>Os seus dados</h3>
+                        </div>
+                        <div class="agendamento-dados">
+                            <div class="agendamento-field">
+                                <label for="agendamentoNome">
+                                    <span class="material-icons">person</span>
+                                    Nome completo
+                                </label>
+                                <input 
+                                    type="text" 
+                                    id="agendamentoNome" 
+                                    name="nome"
+                                    placeholder="Ex: João Silva"
+                                    autocomplete="name"
+                                    required
+                                >
+                                <span class="agendamento-hint">Apenas letras e espaços</span>
+                            </div>
+                            <div class="agendamento-field">
+                                <label for="agendamentoTelefone">
+                                    <span class="material-icons">phone</span>
+                                    Telefone (WhatsApp)
+                                </label>
+                                <input 
+                                    type="tel" 
+                                    id="agendamentoTelefone" 
+                                    name="telefone"
+                                    placeholder="9XX XXX XXX"
+                                    maxlength="9"
+                                    inputmode="numeric"
+                                    autocomplete="tel"
+                                    required
+                                >
+                                <span class="agendamento-hint">9 dígitos, começa com 9</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PASSO 5: PAGAMENTO -->
+                    <div class="agendamento-step">
+                        <div class="agendamento-step__header">
+                            <span class="agendamento-step__number">5</span>
+                            <h3>Forma de pagamento</h3>
+                        </div>
+                        <div class="agendamento-pagamento">
+                            <label class="agendamento-pagamento__option">
+                                <input type="radio" name="pagamento" value="cash" required>
+                                <div class="agendamento-pagamento__card">
+                                    <span class="material-icons">payments</span>
+                                    <strong>Dinheiro</strong>
+                                    <small>Paga no local</small>
+                                </div>
+                            </label>
+                            <label class="agendamento-pagamento__option">
+                                <input type="radio" name="pagamento" value="express" required>
+                                <div class="agendamento-pagamento__card">
+                                    <span class="material-icons">phone_iphone</span>
+                                    <strong>Multicai Express</strong>
+                                    <small>Anexa comprovativo</small>
+                                </div>
+                            </label>
+                        </div>
+
+                        <div class="agendamento-comprovativo" id="agendamentoComprovativo" style="display: none;">
+                            <label for="agendamentoComprovativoInput">
+                                <span class="material-icons">upload_file</span>
+                                Anexar comprovativo (foto ou PDF)
+                            </label>
+                            <input 
+                                type="file" 
+                                id="agendamentoComprovativoInput"
+                                accept="image/*,application/pdf"
+                            >
+                            <div class="agendamento-file-preview" id="agendamentoFilePreview"></div>
+                        </div>
+                    </div>
+
+                    <!-- ERROS -->
+                    <div class="agendamento-error" id="agendamentoError" style="display: none;">
+                        <span class="material-icons">error_outline</span>
+                        <span id="agendamentoErrorText"></span>
+                    </div>
+
+                    <!-- SUCESSO -->
+                    <div class="agendamento-success" id="agendamentoSuccess" style="display: none;">
+                        <span class="material-icons">check_circle</span>
+                        <h3>Agendamento Confirmado!</h3>
+                        <p id="agendamentoSuccessText"></p>
+                    </div>
+
+                    <!-- BOTÃO -->
+                    <button type="submit" class="mui-btn mui-btn--primary mui-btn--large mui-btn--full" id="agendamentoSubmit">
+                        <span class="material-icons">event_available</span>
+                        <span id="agendamentoSubmitText">Confirmar Agendamento</span>
+                    </button>
+
+                    <p class="agendamento-note">
+                        <span class="material-icons">info</span>
+                        Após confirmar, receberá uma mensagem de confirmação no WhatsApp.
+                    </p>
+                </form>
+
+                <!-- RESUMO LATERAL -->
+                <div class="agendamento-resumo" id="agendamentoResumo" style="display: none;">
+                    <h4>Resumo</h4>
+                    <div class="agendamento-resumo__linha">
+                        <span>Serviço:</span>
+                        <strong id="resumoServico">—</strong>
+                    </div>
+                    <div class="agendamento-resumo__linha">
+                        <span>Barbeiro:</span>
+                        <strong id="resumoBarbeiro">—</strong>
+                    </div>
+                    <div class="agendamento-resumo__linha">
+                        <span>Data:</span>
+                        <strong id="resumoData">—</strong>
+                    </div>
+                    <div class="agendamento-resumo__linha">
+                        <span>Hora:</span>
+                        <strong id="resumoHora">—</strong>
+                    </div>
+                    <div class="agendamento-resumo__linha agendamento-resumo__linha--total">
+                        <span>Total:</span>
+                        <strong id="resumoTotal">1.000 Kz</strong>
+                    </div>
+                    <button type="button" class="mui-btn mui-btn--whatsapp mui-btn--full" id="agendamentoWhatsapp" style="display: none;">
+                        <span class="material-icons">whatsapp</span>
+                        Abrir WhatsApp
+                    </button>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
     <!-- ========== CTA FINAL ========== -->
     <section class="section section--cta">
         <div class="mui-container">
             <div class="cta-box">
-                <h2>Pronto/a Para Transformar o Seu Visual?</h2>
-                <p>Agende já o seu horário e ganhe 10% de desconto na primeira visita.</p>
-                <button class="mui-btn mui-btn--light mui-btn--large" id="btnWhatsappCTA">
-                    <span class="material-icons">whatsapp</span>
-                    Agendar Agora
-                </button>
+                <h2>Pronto Para um Novo Visual?</h2>
+                <p>Agende online agora e garanta o seu horário em menos de 1 minuto.</p>
+                <a href="#agendamento" class="mui-btn mui-btn--light mui-btn--large" id="btnAgendarCTA">
+                    <span class="material-icons">event_available</span>
+                    Agendar Online
+                </a>
             </div>
         </div>
     </section>
@@ -576,7 +523,7 @@
         <div class="mui-container">
             <div class="footer-grid">
                 <div class="footer-col">
-                    <h3>Salão de Beleza Kelson</h3>
+                    <h3>Salão Kelson</h3>
                     <p>A sua beleza é a nossa paixão.</p>
                 </div>
                 <div class="footer-col">
@@ -586,6 +533,7 @@
                         <li><a href="#galeria">Galeria</a></li>
                         <li><a href="#sobre">Sobre</a></li>
                         <li><a href="#localizacao">Localização</a></li>
+                        <li><a href="#agendamento">Agendar</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
@@ -596,33 +544,32 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Salão de Beleza Kelson || Todos os direitos reservados || Desenvolvido por: BernaTicSolutions, Lda• Versão 1.0.0</p>
+                <p>&copy; 2026 Salão Kelson || Todos os direitos reservados || Desenvolvido por: BernaTicSolutions, Lda • Versão 1.0.0</p>
                 <a href="politica-privacidade.html">Política de Privacidade</a>
             </div>
         </div>
     </footer>
 
-    <!-- ========== BOTÃO WHATSAPP FLUTUANTE ========== -->
-    <a href="#" class="whatsapp-float" id="btnWhatsappFloat" target="_blank" rel="noopener">
-        <span class="material-icons">whatsapp</span>
+    <!-- ========== BOTÃO FLUTUANTE ========== -->
+    <a href="#agendamento" class="whatsapp-float" id="btnAgendarFloat" aria-label="Agendar">
+        <span class="material-icons">event_available</span>
     </a>
 
-    <!-- ========== POPUP DE CAPTURA (opcional) ========== -->
+    <!-- ========== POPUP DE CAPTURA ========== -->
     <div class="popup-overlay" id="popupOverlay" style="display: none;">
         <div class="popup-content">
             <button class="popup-close" id="popupClose">&times;</button>
             <h3>Ganhe 10% de Desconto!</h3>
-            <p>Preencha o seu nome e contacte-nos diretamente pelo WhatsApp.</p>
+            <p>Agende o seu corte online e ganhe desconto na 1ª visita.</p>
             <input type="text" id="popupNome" placeholder="O seu nome" class="mui-input">
             <button class="mui-btn mui-btn--primary mui-btn--full" id="popupWhatsapp">
-                <span class="material-icons">whatsapp</span>
-                Quero o Desconto
+                <span class="material-icons">event_available</span>
+                Agendar Agora
             </button>
         </div>
     </div>
 
-
-        <!-- ========== FIREBASE SDK (COMPAT) ========== -->
+    <!-- ========== FIREBASE SDK (COMPAT) ========== -->
     <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
@@ -630,7 +577,7 @@
     <!-- ========== TEUS SCRIPTS ========== -->
     <script src="assets/js/config.js"></script>
     <script src="assets/js/firebase-config.js"></script>
-    <script src="assets/js/agendamento.js"></script>  ← 🔥 NOVO
+    <script src="assets/js/agendamento.js"></script>
     <script src="assets/js/main.js"></script>
 
 </body>

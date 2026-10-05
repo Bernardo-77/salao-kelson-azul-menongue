@@ -455,7 +455,7 @@
             horaAgendada.setHours(h, m, 0, 0);
             const diffMin = (agora - horaAgendada) / 1000 / 60;
 
-            if (diffMin > 30) {
+            if (diffMin > 15) {
                 const resposta = confirm(`⚠️ Cliente chegou ${Math.round(diffMin)} minutos atrasado.\n\nAplicar taxa de atraso de 10% (${formatarKz(Math.round(pedido.valorFinal * 0.1))})?`);
                 if (resposta) {
                     taxaAtraso = Math.round(pedido.valorFinal * 0.1);

@@ -349,7 +349,7 @@
             const diffMin = (agora - horaAgendada) / 1000 / 60;
 
             // Se cliente chegou mais de 30 min depois, aplicar 10%
-            if (diffMin > 30) {
+            if (diffMin > 15) {
                 const resposta = confirm(
                     `⚠️ Cliente chegou ${Math.round(diffMin)} minutos atrasado.\n\nAplicar taxa de atraso de 10% (${formatarKz(Math.round(pedido.valorFinal * 0.1))})?\n\nOK = Aplicar taxa\nCancelar = Sem taxa`
                 );
