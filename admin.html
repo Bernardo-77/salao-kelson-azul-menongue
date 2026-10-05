@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+    <meta name="robots" content="noindex, nofollow">
+    
+    <title>Painel Admin | Salão Kelson</title>
+
+    <!-- Material Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    <!-- CSS Principal -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <!-- CSS do Dashboard -->
+    <link rel="stylesheet" href="assets/css/admin.css">
+
+    <link rel="icon" type="image/x-icon" href="assets/favicon/favicon.ico">
+</head>
+<body class="admin-body">
+
+    <!-- ========== HEADER ========== -->
+    <header class="admin-header">
+        <div class="admin-container admin-header__inner">
+            <div class="admin-header__brand">
+                <img src="assets/img/logo.png" alt="Salão Kelson" class="admin-header__logo" onerror="this.style.display='none'">
+                <div class="admin-header__text">
+                    <h1>Painel Admin</h1>
+                    <p id="adminUserName">Bem-vindo...</p>
+                </div>
+            </div>
+            <div class="admin-header__actions">
+                <a href="index.html" class="admin-btn admin-btn--ghost" title="Voltar ao site">
+                    <span class="material-icons">home</span>
+                    <span class="admin-btn__label">Site</span>
+                </a>
+                <button class="admin-btn admin-btn--danger" id="btnLogout" title="Terminar sessão">
+                    <span class="material-icons">logout</span>
+                    <span class="admin-btn__label">Sair</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ========== MAIN ========== -->
+    <main class="admin-main">
+        <div class="admin-container">
+
+            <!-- ========== CARDS DE ESTATÍSTICAS ========== -->
+            <section class="admin-stats">
+                <div class="stat-card stat-card--today">
+                    <div class="stat-card__icon">
+                        <span class="material-icons">today</span>
+                    </div>
+                    <div class="stat-card__content">
+                        <p class="stat-card__label">Hoje</p>
+                        <p class="stat-card__value" id="statToday">0</p>
+                        <p class="stat-card__sub" id="statTodayMoney">0 Kz</p>
+                    </div>
+                </div>
+
+                <div class="stat-card stat-card--week">
+                    <div class="stat-card__icon">
+                        <span class="material-icons">date_range</span>
+                    </div>
+                    <div class="stat-card__content">
+                        <p class="stat-card__label">Esta Semana</p>
+                        <p class="stat-card__value" id="statWeek">0</p>
+                        <p class="stat-card__sub" id="statWeekMoney">0 Kz</p>
+                    </div>
+                </div>
+
+                <div class="stat-card stat-card--month">
+                    <div class="stat-card__icon">
+                        <span class="material-icons">calendar_month</span>
+                    </div>
+                    <div class="stat-card__content">
+                        <p class="stat-card__label">Este Mês</p>
+                        <p class="stat-card__value" id="statMonth">0</p>
+                        <p class="stat-card__sub" id="statMonthMoney">0 Kz</p>
+                    </div>
+                </div>
+
+                <div class="stat-card stat-card--year">
+                    <div class="stat-card__icon">
+                        <span class="material-icons">event_available</span>
+                    </div>
+                    <div class="stat-card__content">
+                        <p class="stat-card__label">Este Ano</p>
+                        <p class="stat-card__value" id="statYear">0</p>
+                        <p class="stat-card__sub" id="statYearMoney">0 Kz</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ========== TABS ========== -->
+            <section class="admin-tabs">
+                <div class="admin-tabs__nav">
+                    <button class="admin-tab admin-tab--active" data-tab="pedidos">
+                        <span class="material-icons">receipt_long</span>
+                        <span>Pedidos</span>
+                    </button>
+                    <button class="admin-tab" data-tab="funcionarios">
+                        <span class="material-icons">group</span>
+                        <span>Funcionários</span>
+                    </button>
+                    <button class="admin-tab" data-tab="financas">
+                        <span class="material-icons">payments</span>
+                        <span>Finanças</span>
+                    </button>
+                    <button class="admin-tab" data-tab="relatorios">
+                        <span class="material-icons">picture_as_pdf</span>
+                        <span>Relatórios</span>
+                    </button>
+                </div>
+
+                <!-- ========== TAB: PEDIDOS ========== -->
+                <div class="admin-tab__content admin-tab__content--active" id="tab-pedidos">
+                    <div class="admin-empty">
+                        <span class="material-icons">pending</span>
+                        <h3>Carregando pedidos...</h3>
+                        <p>Aguarde um momento.</p>
+                    </div>
+                </div>
+
+                <!-- ========== TAB: FUNCIONÁRIOS ========== -->
+                <div class="admin-tab__content" id="tab-funcionarios">
+                    <div class="admin-empty">
+                        <span class="material-icons">pending</span>
+                        <h3>Carregando funcionários...</h3>
+                        <p>Aguarde um momento.</p>
+                    </div>
+                </div>
+
+                <!-- ========== TAB: FINANÇAS ========== -->
+                <div class="admin-tab__content" id="tab-financas">
+                    <div class="admin-empty">
+                        <span class="material-icons">pending</span>
+                        <h3>Carregando finanças...</h3>
+                        <p>Aguarde um momento.</p>
+                    </div>
+                </div>
+
+                <!-- ========== TAB: RELATÓRIOS ========== -->
+                <div class="admin-tab__content" id="tab-relatorios">
+                    <div class="admin-report">
+                        <span class="material-icons admin-report__icon">picture_as_pdf</span>
+                        <h3>Gerar Relatórios PDF</h3>
+                        <p>Escolha o período e clique em gerar:</p>
+                        
+                        <div class="admin-report__buttons">
+                            <button class="admin-btn admin-btn--primary" data-pdf="today">
+                                <span class="material-icons">today</span>
+                                Relatório de Hoje
+                            </button>
+                            <button class="admin-btn admin-btn--primary" data-pdf="week">
+                                <span class="material-icons">date_range</span>
+                                Relatório Semanal
+                            </button>
+                            <button class="admin-btn admin-btn--primary" data-pdf="month">
+                                <span class="material-icons">calendar_month</span>
+                                Relatório Mensal
+                            </button>
+                            <button class="admin-btn admin-btn--primary" data-pdf="year">
+                                <span class="material-icons">event_available</span>
+                                Relatório Anual
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+
+
+            <!-- ========== MODAL: ADICIONAR / EDITAR FUNCIONÁRIO ========== -->
+        <div class="funcionario-modal-overlay" id="funcionarioModal" style="display: none;">
+            <div class="funcionario-modal">
+                <div class="funcionario-modal__header">
+                    <div>
+                        <h3 id="funcionarioModalTitle">Novo Funcionário</h3>
+                        <p id="funcionarioModalSubtitle">Preencha os dados abaixo</p>
+                    </div>
+                    <button class="funcionario-modal__close" id="btnFecharModalFuncionario">
+                        <span class="material-icons">close</span>
+                    </button>
+                </div>
+
+                <form class="funcionario-modal__body" id="formFuncionario">
+                    <!-- Nome -->
+                    <div class="funcionario-modal__field">
+                        <label for="funcNome">
+                            <span class="material-icons">person</span>
+                            Nome Completo
+                        </label>
+                        <input type="text" id="funcNome" placeholder="Ex: João Silva" required>
+                        <span class="funcionario-modal__hint">Apenas letras e espaços</span>
+                    </div>
+
+                    <!-- Telefone -->
+                    <div class="funcionario-modal__field">
+                        <label for="funcTelefone">
+                            <span class="material-icons">phone</span>
+                            Telefone (9 dígitos)
+                        </label>
+                        <input type="tel" id="funcTelefone" placeholder="9XX XXX XXX" maxlength="9" inputmode="numeric" required>
+                        <span class="funcionario-modal__hint">Deve começar com 9</span>
+                    </div>
+
+                    <!-- Senha (só mostra ao adicionar) -->
+                    <div class="funcionario-modal__field" id="funcSenhaField">
+                        <label for="funcSenha">
+                            <span class="material-icons">lock</span>
+                            Senha (mínimo 6 caracteres)
+                        </label>
+                        <input type="text" id="funcSenha" placeholder="Ex: Kelson2026!" value="">
+                        <span class="funcionario-modal__hint">⚠️ Copia esta senha! O funcionário precisa dela para entrar.</span>
+                    </div>
+
+                    <!-- Role -->
+                    <div class="funcionario-modal__field">
+                        <label for="funcRole">
+                            <span class="material-icons">badge</span>
+                            Função
+                        </label>
+                        <select id="funcRole" required>
+                            <option value="barbeiro">💼 Barbeiro</option>
+                            <option value="admin">👑 Admin</option>
+                        </select>
+                    </div>
+
+                    <!-- Foto URL -->
+                    <div class="funcionario-modal__field">
+                        <label for="funcFoto">
+                            <span class="material-icons">image</span>
+                            Foto (URL ou base64) — opcional
+                        </label>
+                        <input type="text" id="funcFoto" placeholder="https://... ou deixe vazio">
+                        <span class="funcionario-modal__hint">Cole um link de imagem ou deixe vazio para usar avatar com inicial</span>
+                    </div>
+
+                    <!-- Info sobre criação de conta -->
+                    <div class="funcionario-modal__info" id="funcInfoCriacao">
+                        <span class="material-icons">info</span>
+                        <div>
+                            <strong>Antes de guardar:</strong>
+                            <p id="funcInfoTexto">Crie a conta no Firebase Console primeiro (Authentication → Add user), depois volte e preencha este formulário.</p>
+                        </div>
+                    </div>
+
+                    <!-- Erro -->
+                    <div class="funcionario-modal__error" id="funcError" style="display: none;">
+                        <span class="material-icons">error_outline</span>
+                        <span id="funcErrorText"></span>
+                    </div>
+
+                    <!-- Ações -->
+                    <div class="funcionario-modal__actions">
+                        <button type="button" class="admin-btn admin-btn--ghost" id="btnCancelarFuncionario">
+                            Cancelar
+                        </button>
+                        <button type="submit" class="admin-btn admin-btn--primary" id="btnGuardarFuncionario">
+                            <span class="material-icons">save</span>
+                            Guardar Funcionário
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
+
+
+    </main>
+
+    <!-- ========== FIREBASE SDK ========== -->
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
+    
+    <!-- jsPDF para PDFs -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.2/jspdf.plugin.autotable.min.js"></script>
+
+    <!-- ========== TEUS SCRIPTS ========== -->
+    <script src="assets/js/config.js"></script>
+    <script src="assets/js/firebase-config.js"></script>
+    <script src="assets/js/admin.js"></script>
+
+</body>
+</html>

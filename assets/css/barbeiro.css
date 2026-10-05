@@ -1,0 +1,351 @@
+/* ============================================================
+   PAINEL BARBEIRO
+   Salão Kelson - Menongue
+   ============================================================ */
+
+/* ========== FILTROS ========== */
+.barbeiro-filtros {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+    overflow-x: auto;
+    padding-bottom: 4px;
+    -webkit-overflow-scrolling: touch;
+}
+
+.barbeiro-filtros::-webkit-scrollbar {
+    display: none;
+}
+
+.barbeiro-filtro {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 10px 16px;
+    background: white;
+    border: 2px solid #e2e8f0;
+    border-radius: 50px;
+    font-family: inherit;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #4a5568;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    flex-shrink: 0;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.barbeiro-filtro:hover {
+    border-color: #d63384;
+    color: #d63384;
+}
+
+.barbeiro-filtro--active {
+    background: #d63384;
+    border-color: #d63384;
+    color: white;
+}
+
+.barbeiro-filtro .material-icons {
+    font-size: 1.1rem;
+}
+
+.barbeiro-filtro__badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 20px;
+    height: 20px;
+    padding: 0 6px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50px;
+    font-size: 0.7rem;
+    font-weight: 700;
+}
+
+.barbeiro-filtro:not(.barbeiro-filtro--active) .barbeiro-filtro__badge {
+    background: #d63384;
+    color: white;
+}
+
+/* ========== PEDIDOS ========== */
+.barbeiro-pedidos {
+    display: grid;
+    gap: 14px;
+}
+
+.barbeiro-pedido {
+    background: white;
+    border-radius: 16px;
+    padding: 18px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border-left: 4px solid #dd6b20;
+    transition: all 0.3s ease;
+}
+
+.barbeiro-pedido:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.barbeiro-pedido--concluido {
+    border-left-color: #38a169;
+    opacity: 0.85;
+}
+
+.barbeiro-pedido--cancelado {
+    border-left-color: #e53e3e;
+    opacity: 0.6;
+}
+
+.barbeiro-pedido--no_show {
+    border-left-color: #718096;
+    opacity: 0.7;
+}
+
+.barbeiro-pedido--hoje {
+    background: linear-gradient(135deg, #fff5f7 0%, #ffffff 100%);
+    border-left-width: 6px;
+    box-shadow: 0 6px 20px rgba(214, 51, 132, 0.15);
+}
+
+/* ========== HEADER DO PEDIDO ========== */
+.barbeiro-pedido__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 14px;
+    flex-wrap: wrap;
+}
+
+.barbeiro-pedido__hora {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.barbeiro-pedido__hora-strong {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #d63384;
+    line-height: 1;
+}
+
+.barbeiro-pedido__data {
+    font-size: 0.75rem;
+    color: #718096;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.barbeiro-pedido__status {
+    padding: 5px 12px;
+    border-radius: 50px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+}
+
+.status-pendente {
+    background: #feebc8;
+    color: #c05621;
+}
+
+.status-concluido {
+    background: #c6f6d5;
+    color: #276749;
+}
+
+.status-cancelado {
+    background: #fed7d7;
+    color: #c53030;
+}
+
+.status-no_show {
+    background: #e2e8f0;
+    color: #4a5568;
+}
+
+/* ========== CORPO DO PEDIDO ========== */
+.barbeiro-pedido__cliente {
+    margin-bottom: 12px;
+}
+
+.barbeiro-pedido__cliente h4 {
+    font-size: 1.05rem;
+    color: #2d3748;
+    margin: 0 0 4px;
+    font-weight: 600;
+}
+
+.barbeiro-pedido__cliente a {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    color: #25D366;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.barbeiro-pedido__cliente a:hover {
+    color: #128C7E;
+    text-decoration: underline;
+}
+
+.barbeiro-pedido__cliente .material-icons {
+    font-size: 1rem;
+}
+
+.barbeiro-pedido__detalhes {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 12px;
+    background: #fafbfc;
+    border-radius: 10px;
+    margin-bottom: 14px;
+}
+
+.barbeiro-pedido__linha {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    font-size: 0.85rem;
+    color: #4a5568;
+    flex-wrap: wrap;
+}
+
+.barbeiro-pedido__linha strong {
+    color: #2d3748;
+    font-weight: 600;
+}
+
+.barbeiro-pedido__valor {
+    color: #d63384 !important;
+    font-weight: 700 !important;
+    font-size: 1rem !important;
+}
+
+/* ========== AÇÕES ========== */
+.barbeiro-pedido__actions {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.barbeiro-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 50px;
+    font-family: inherit;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    white-space: nowrap;
+    -webkit-tap-highlight-color: transparent;
+    flex: 1;
+    min-width: 140px;
+}
+
+.barbeiro-btn .material-icons {
+    font-size: 1.1rem;
+}
+
+.barbeiro-btn--success {
+    background: linear-gradient(135deg, #38a169, #2f855a);
+    color: white;
+    box-shadow: 0 4px 12px rgba(56, 161, 105, 0.3);
+}
+
+.barbeiro-btn--success:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(56, 161, 105, 0.4);
+}
+
+.barbeiro-btn--danger {
+    background: white;
+    color: #e53e3e;
+    border: 2px solid #fed7d7;
+}
+
+.barbeiro-btn--danger:hover {
+    background: #fed7d7;
+    border-color: #e53e3e;
+}
+
+.barbeiro-btn--whatsapp {
+    background: #25D366;
+    color: white;
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+}
+
+.barbeiro-btn--whatsapp:hover {
+    background: #128C7E;
+    transform: translateY(-2px);
+}
+
+.barbeiro-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* ========== EMPTY STATE ========== */
+.barbeiro-empty {
+    text-align: center;
+    padding: 60px 20px;
+    background: white;
+    border-radius: 16px;
+    color: #a0aec0;
+}
+
+.barbeiro-empty .material-icons {
+    font-size: 4rem;
+    color: #cbd5e0;
+    margin-bottom: 12px;
+    display: block;
+}
+
+.barbeiro-empty h3 {
+    font-size: 1.2rem;
+    color: #718096;
+    margin: 0 0 6px;
+}
+
+.barbeiro-empty p {
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* ========== RESPONSIVO ========== */
+@media (max-width: 480px) {
+    .barbeiro-pedido {
+        padding: 14px;
+    }
+
+    .barbeiro-pedido__hora-strong {
+        font-size: 1.2rem;
+    }
+
+    .barbeiro-btn {
+        width: 100%;
+        flex: none;
+    }
+
+    .barbeiro-pedido__actions {
+        flex-direction: column;
+    }
+}

@@ -39,6 +39,25 @@
                 <a href="#sobre" class="nav-link">Sobre</a>
                 <a href="#localizacao" class="nav-link">Localização</a>
             </nav>
+
+
+
+
+
+
+
+
+
+            <a href="login.html" class="nav-link nav-link--login" >
+                🔒 Área Restrita
+            </a>
+
+
+
+
+
+
+
             <button class="mui-btn mui-btn--primary mui-btn--whatsapp" id="btnWhatsappHeader">
                 <span class="material-icons">whatsapp</span>
                 Agendar
@@ -306,6 +325,238 @@
         </div>
     </section>
 
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- ========== AGENDAMENTO ONLINE ========== -->
+        <section class="section section--agendamento" id="agendamento">
+            <div class="mui-container">
+                <div class="section-header">
+                    <span class="mui-chip mui-chip--category">Agendamento Online</span>
+                    <h2 class="section-title">Marque o Seu Horário</h2>
+                    <p class="section-subtitle">
+                        Escolha o serviço, o profissional e o melhor horário para si.
+                    </p>
+                </div>
+
+                <div class="agendamento-wrapper">
+                    <form id="agendamentoForm" class="agendamento-form" novalidate>
+
+                        <!-- PASSO 1: SERVIÇO -->
+                        <div class="agendamento-step">
+                            <div class="agendamento-step__header">
+                                <span class="agendamento-step__number">1</span>
+                                <h3>Escolha o serviço</h3>
+                            </div>
+                            <div class="agendamento-services" id="agendamentoServices">
+                                <!-- Preenchido via JS -->
+                                <div class="agendamento-loading">A carregar serviços...</div>
+                            </div>
+                            <input type="hidden" id="selectedServico" required>
+                        </div>
+
+                        <!-- PASSO 2: BARBEIRO -->
+                        <div class="agendamento-step">
+                            <div class="agendamento-step__header">
+                                <span class="agendamento-step__number">2</span>
+                                <h3>Escolha o profissional</h3>
+                            </div>
+                            <div class="agendamento-barbeiros" id="agendamentoBarbeiros">
+                                <!-- Preenchido via JS -->
+                                <div class="agendamento-loading">A carregar profissionais...</div>
+                            </div>
+                            <input type="hidden" id="selectedBarbeiro" required>
+                        </div>
+
+                        <!-- PASSO 3: DATA E HORA -->
+                        <div class="agendamento-step">
+                            <div class="agendamento-step__header">
+                                <span class="agendamento-step__number">3</span>
+                                <h3>Escolha a data e hora</h3>
+                            </div>
+                            <div class="agendamento-datetime">
+                                <div class="agendamento-field">
+                                    <label for="agendamentoData">
+                                        <span class="material-icons">calendar_today</span>
+                                        Data
+                                    </label>
+                                    <input 
+                                        type="date" 
+                                        id="agendamentoData" 
+                                        name="data"
+                                        required
+                                    >
+                                </div>
+                                <div class="agendamento-field">
+                                    <label for="agendamentoHora">
+                                        <span class="material-icons">schedule</span>
+                                        Hora
+                                    </label>
+                                    <select id="agendamentoHora" name="hora" required disabled>
+                                        <option value="">Escolha primeiro a data</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="agendamento-info" id="agendamentoInfoHora" style="display: none;"></div>
+                        </div>
+
+                        <!-- PASSO 4: DADOS DO CLIENTE -->
+                        <div class="agendamento-step">
+                            <div class="agendamento-step__header">
+                                <span class="agendamento-step__number">4</span>
+                                <h3>Os seus dados</h3>
+                            </div>
+                            <div class="agendamento-dados">
+                                <div class="agendamento-field">
+                                    <label for="agendamentoNome">
+                                        <span class="material-icons">person</span>
+                                        Nome completo
+                                    </label>
+                                    <input 
+                                        type="text" 
+                                        id="agendamentoNome" 
+                                        name="nome"
+                                        placeholder="Ex: João Silva"
+                                        autocomplete="name"
+                                        required
+                                    >
+                                    <span class="agendamento-hint">Apenas letras e espaços</span>
+                                </div>
+                                <div class="agendamento-field">
+                                    <label for="agendamentoTelefone">
+                                        <span class="material-icons">phone</span>
+                                        Telefone (WhatsApp)
+                                    </label>
+                                    <input 
+                                        type="tel" 
+                                        id="agendamentoTelefone" 
+                                        name="telefone"
+                                        placeholder="9XX XXX XXX"
+                                        maxlength="9"
+                                        inputmode="numeric"
+                                        autocomplete="tel"
+                                        required
+                                    >
+                                    <span class="agendamento-hint">9 dígitos, começa com 9</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- PASSO 5: PAGAMENTO -->
+                        <div class="agendamento-step">
+                            <div class="agendamento-step__header">
+                                <span class="agendamento-step__number">5</span>
+                                <h3>Forma de pagamento</h3>
+                            </div>
+                            <div class="agendamento-pagamento">
+                                <label class="agendamento-pagamento__option">
+                                    <input type="radio" name="pagamento" value="cash" required>
+                                    <div class="agendamento-pagamento__card">
+                                        <span class="material-icons">payments</span>
+                                        <strong>Dinheiro</strong>
+                                        <small>Paga no local</small>
+                                    </div>
+                                </label>
+                                <label class="agendamento-pagamento__option">
+                                    <input type="radio" name="pagamento" value="express" required>
+                                    <div class="agendamento-pagamento__card">
+                                        <span class="material-icons">phone_iphone</span>
+                                        <strong>Multicai Express</strong>
+                                        <small>Anexa comprovativo</small>
+                                    </div>
+                                </label>
+                            </div>
+
+                            <!-- Upload de comprovativo (só aparece se express) -->
+                            <div class="agendamento-comprovativo" id="agendamentoComprovativo" style="display: none;">
+                                <label for="agendamentoComprovativoInput">
+                                    <span class="material-icons">upload_file</span>
+                                    Anexar comprovativo (foto ou PDF)
+                                </label>
+                                <input 
+                                    type="file" 
+                                    id="agendamentoComprovativoInput"
+                                    accept="image/*,application/pdf"
+                                >
+                                <div class="agendamento-file-preview" id="agendamentoFilePreview"></div>
+                            </div>
+                        </div>
+
+                        <!-- ERROS -->
+                        <div class="agendamento-error" id="agendamentoError" style="display: none;">
+                            <span class="material-icons">error_outline</span>
+                            <span id="agendamentoErrorText"></span>
+                        </div>
+
+                        <!-- SUCESSO (placeholder) -->
+                        <div class="agendamento-success" id="agendamentoSuccess" style="display: none;">
+                            <span class="material-icons">check_circle</span>
+                            <h3>Agendamento Confirmado!</h3>
+                            <p id="agendamentoSuccessText"></p>
+                        </div>
+
+                        <!-- BOTÃO -->
+                        <button type="submit" class="mui-btn mui-btn--primary mui-btn--large mui-btn--full" id="agendamentoSubmit">
+                            <span class="material-icons">event_available</span>
+                            <span id="agendamentoSubmitText">Confirmar Agendamento</span>
+                        </button>
+
+                        <p class="agendamento-note">
+                            <span class="material-icons">info</span>
+                            Após confirmar, receberá uma mensagem de confirmação no WhatsApp.
+                        </p>
+                    </form>
+
+                    <!-- RESUMO LATERAL (opcional, escondido em mobile) -->
+                    <div class="agendamento-resumo" id="agendamentoResumo" style="display: none;">
+                        <h4>Resumo</h4>
+                        <div class="agendamento-resumo__linha">
+                            <span>Serviço:</span>
+                            <strong id="resumoServico">—</strong>
+                        </div>
+                        <div class="agendamento-resumo__linha">
+                            <span>Barbeiro:</span>
+                            <strong id="resumoBarbeiro">—</strong>
+                        </div>
+                        <div class="agendamento-resumo__linha">
+                            <span>Data:</span>
+                            <strong id="resumoData">—</strong>
+                        </div>
+                        <div class="agendamento-resumo__linha">
+                            <span>Hora:</span>
+                            <strong id="resumoHora">—</strong>
+                        </div>
+                        <div class="agendamento-resumo__linha agendamento-resumo__linha--total">
+                            <span>Total:</span>
+                            <strong id="resumoTotal">1.000 Kz</strong>
+                        </div>
+                        <button type="button" class="mui-btn mui-btn--whatsapp mui-btn--full" id="agendamentoWhatsapp" style="display: none;">
+                            <span class="material-icons">whatsapp</span>
+                            Abrir WhatsApp
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     <!-- ========== CTA FINAL ========== -->
     <section class="section section--cta">
         <div class="mui-container">
@@ -370,8 +621,17 @@
         </div>
     </div>
 
-    <!-- ========== SCRIPTS ========== -->
+
+        <!-- ========== FIREBASE SDK (COMPAT) ========== -->
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
+
+    <!-- ========== TEUS SCRIPTS ========== -->
     <script src="assets/js/config.js"></script>
+    <script src="assets/js/firebase-config.js"></script>
+    <script src="assets/js/agendamento.js"></script>  ← 🔥 NOVO
     <script src="assets/js/main.js"></script>
+
 </body>
 </html>

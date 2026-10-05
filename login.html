@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+    <meta name="description" content="Área Restrita - Salão de Beleza Kelson">
+    <meta name="robots" content="noindex, nofollow">
+    
+    <title>Área Restrita | Salão de Beleza Kelson</title>
+
+    <!-- Material Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    <!-- CSS Principal (para variáveis e estilos base) -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <!-- CSS Específico do Login -->
+    <link rel="stylesheet" href="assets/css/login.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon/favicon.ico">
+</head>
+<body class="login-body">
+
+    <!-- ========== HEADER SIMPLES ========== -->
+    <header class="login-header">
+        <div class="mui-container">
+            <a href="index.html" class="login-back">
+                <span class="material-icons">arrow_back</span>
+                Voltar ao site
+            </a>
+        </div>
+    </header>
+
+    <!-- ========== FORMULÁRIO DE LOGIN ========== -->
+    <main class="login-main">
+        <div class="login-container">
+            
+            <div class="login-box">
+                <!-- Logo -->
+                <div class="login-logo">
+                    <img src="assets/img/logo.png" alt="Salão Kelson" onerror="this.style.display='none'">
+                    <h1>Área Restrita</h1>
+                    <p>Acesso exclusivo para funcionários</p>
+                </div>
+
+                <!-- Formulário -->
+                <form id="loginForm" class="login-form" autocomplete="on">
+                    
+                    <!-- Campo Telefone -->
+                    <div class="login-field">
+                        <label for="telefone">
+                            <span class="material-icons">phone</span>
+                            Telefone
+                        </label>
+                        <input 
+                            type="tel" 
+                            id="telefone" 
+                            name="telefone"
+                            placeholder="9XX XXX XXX"
+                            maxlength="9"
+                            inputmode="numeric"
+                            pattern="[0-9]{9}"
+                            autocomplete="username"
+                            required
+                        >
+                        <span class="login-hint">9 dígitos, começa com 9</span>
+                    </div>
+
+                    <!-- Campo Senha -->
+                    <div class="login-field">
+                        <label for="senha">
+                            <span class="material-icons">lock</span>
+                            Senha
+                        </label>
+                        <div class="login-password-wrapper">
+                            <input 
+                                type="password" 
+                                id="senha" 
+                                name="senha"
+                                placeholder="A sua senha"
+                                autocomplete="current-password"
+                                required
+                            >
+                            <button type="button" class="login-toggle-password" id="togglePassword">
+                                <span class="material-icons">visibility</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Erro -->
+                    <div class="login-error" id="loginError" style="display: none;">
+                        <span class="material-icons">error_outline</span>
+                        <span id="loginErrorText"></span>
+                    </div>
+
+                    <!-- Botão Entrar -->
+                    <button type="submit" class="login-btn" id="loginBtn">
+                        <span class="material-icons">login</span>
+                        <span id="loginBtnText">Entrar</span>
+                    </button>
+                </form>
+
+                <!-- Rodapé -->
+                <div class="login-footer">
+                    <p>
+                        Esqueceu a senha? Contacte o administrador.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Créditos -->
+            <div class="login-credits">
+                <p>© 2026 Salão de Beleza Kelson • Desenvolvido por BernaTicSolutions</p>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- ========== FIREBASE SDK (COMPAT) ========== -->
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
+
+    <!-- ========== TEUS SCRIPTS ========== -->
+    <script src="assets/js/config.js"></script>
+    <script src="assets/js/firebase-config.js"></script>
+    <script src="assets/js/auth.js"></script>
+
+</body>
+</html>
